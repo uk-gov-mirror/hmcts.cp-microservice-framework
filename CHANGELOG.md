@@ -4,6 +4,8 @@ on [Keep a CHANGELOG](http://keepachangelog.com/). This project adheres to
 [Semantic Versioning](http://semver.org/).
 
 [Unreleased]
+### Changed
+- Rename EventPullConfiguration field name
 
 # [17.105.0-M5] - 2026-03-11
 ### Added

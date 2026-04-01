@@ -18,27 +18,27 @@ public class EventPullConfigurationTest {
     @Test
     public void shouldParseTheJndiValueAsBooleanTrueIfTheConfigStringIsTrue() throws Exception {
 
-        setField(eventPullConfiguration, "shouldProcessEventsFromEventTopic", "true");
+        setField(eventPullConfiguration, "shouldProcessEventsByPullMechanism", "true");
         assertThat(eventPullConfiguration.shouldProcessEventsByPullMechanism(), is(true));
     }
 
     @Test
     public void shouldParseTheJndiValueAsBooleanFalseIfTheConfigStringIsNotTrue() throws Exception {
 
-        setField(eventPullConfiguration, "shouldProcessEventsFromEventTopic", "something-not-true");
+        setField(eventPullConfiguration, "shouldProcessEventsByPullMechanism", "something-not-true");
         assertThat(eventPullConfiguration.shouldProcessEventsByPullMechanism(), is(false));
     }
 
     @Test
     public void shouldCacheTheParsedBooleanInMemoryOnceParsed() throws Exception {
 
-        setField(eventPullConfiguration, "shouldProcessEventsFromEventTopic", "true");
+        setField(eventPullConfiguration, "shouldProcessEventsByPullMechanism", "true");
         assertThat(eventPullConfiguration.shouldProcessEventsByPullMechanism(), is(true));
-        setField(eventPullConfiguration, "shouldProcessEventsFromEventTopic", "false");
+        setField(eventPullConfiguration, "shouldProcessEventsByPullMechanism", "false");
         assertThat(eventPullConfiguration.shouldProcessEventsByPullMechanism(), is(true));
-        setField(eventPullConfiguration, "shouldProcessEventsFromEventTopic", "something-silly");
+        setField(eventPullConfiguration, "shouldProcessEventsByPullMechanism", "something-silly");
         assertThat(eventPullConfiguration.shouldProcessEventsByPullMechanism(), is(true));
-        setField(eventPullConfiguration, "shouldProcessEventsFromEventTopic", null);
+        setField(eventPullConfiguration, "shouldProcessEventsByPullMechanism", null);
         assertThat(eventPullConfiguration.shouldProcessEventsByPullMechanism(), is(true));
     }
 }
