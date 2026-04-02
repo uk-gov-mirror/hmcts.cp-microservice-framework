@@ -5,7 +5,7 @@
     <parent>
         <groupId>uk.gov.justice.framework-generators</groupId>
         <artifactId>framework-generators</artifactId>
-        <version>17.105.0-M6-SNAPSHOT</version>
+        <version>17.105.0-M6</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 

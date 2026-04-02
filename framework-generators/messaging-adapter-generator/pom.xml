@@ -5,7 +5,7 @@
     <parent>
         <artifactId>framework-generators</artifactId>
         <groupId>uk.gov.justice.framework-generators</groupId>
-        <version>17.105.0-M6-SNAPSHOT</version>
+        <version>17.105.0-M6</version>
     </parent>
     <artifactId>messaging-adapter-generator</artifactId>
     <dependencies>
