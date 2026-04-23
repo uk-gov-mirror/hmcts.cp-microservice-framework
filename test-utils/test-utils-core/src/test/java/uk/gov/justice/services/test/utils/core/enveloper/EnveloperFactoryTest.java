@@ -5,7 +5,7 @@ import uk.gov.justice.domain.annotation.Event;
 import uk.gov.justice.services.core.enveloper.Enveloper;
 import uk.gov.justice.services.messaging.JsonEnvelope;
 
-import javax.json.JsonObject;
+import jakarta.json.JsonObject;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Stream;

@@ -3,7 +3,7 @@ package uk.gov.justice.services.adapter.rest.envelope;
 import static java.nio.charset.Charset.defaultCharset;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.MediaType;
 
 import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.Test;

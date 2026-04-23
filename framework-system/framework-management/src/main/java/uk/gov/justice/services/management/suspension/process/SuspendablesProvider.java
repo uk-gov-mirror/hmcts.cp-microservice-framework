@@ -7,9 +7,9 @@ import uk.gov.justice.services.management.suspension.api.Suspendable;
 
 import java.util.List;
 
-import javax.enterprise.inject.spi.Bean;
-import javax.enterprise.inject.spi.BeanManager;
-import javax.inject.Inject;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.BeanManager;
+import jakarta.inject.Inject;
 
 public class SuspendablesProvider {
 

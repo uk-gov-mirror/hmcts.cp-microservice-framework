@@ -1,7 +1,7 @@
 package uk.gov.justice.services.clients.core.webclient;
 
-import javax.enterprise.inject.Default;
-import javax.inject.Inject;
+import jakarta.enterprise.inject.Default;
+import jakarta.inject.Inject;
 
 @Default
 public class WebTargetFactoryFactory {

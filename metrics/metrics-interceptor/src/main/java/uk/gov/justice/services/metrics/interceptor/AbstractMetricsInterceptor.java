@@ -4,7 +4,7 @@ import uk.gov.justice.services.core.interceptor.Interceptor;
 import uk.gov.justice.services.core.interceptor.InterceptorChain;
 import uk.gov.justice.services.core.interceptor.InterceptorContext;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.Timer;

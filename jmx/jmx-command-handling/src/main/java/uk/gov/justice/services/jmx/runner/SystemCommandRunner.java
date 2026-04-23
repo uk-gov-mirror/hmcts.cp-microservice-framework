@@ -2,7 +2,7 @@ package uk.gov.justice.services.jmx.runner;
 
 import static java.lang.String.format;
 import static java.util.Optional.ofNullable;
-import static javax.transaction.Transactional.TxType.NEVER;
+import static jakarta.transaction.Transactional.TxType.NEVER;
 
 import uk.gov.justice.services.jmx.api.SystemCommandInvocationException;
 import uk.gov.justice.services.jmx.api.command.SystemCommand;
@@ -12,8 +12,8 @@ import uk.gov.justice.services.jmx.command.SystemCommandStore;
 import java.util.Optional;
 import java.util.UUID;
 
-import javax.inject.Inject;
-import javax.transaction.Transactional;
+import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 
 import org.slf4j.Logger;
 

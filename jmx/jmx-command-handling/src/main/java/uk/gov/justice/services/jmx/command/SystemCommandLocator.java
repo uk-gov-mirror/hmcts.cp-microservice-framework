@@ -4,7 +4,7 @@ import uk.gov.justice.services.jmx.api.command.SystemCommand;
 
 import java.util.Optional;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class SystemCommandLocator {
 

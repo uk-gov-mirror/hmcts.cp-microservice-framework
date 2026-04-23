@@ -1,11 +1,11 @@
 package uk.gov.justice.services.adapter.rest.envelope;
 
 import static java.nio.charset.Charset.defaultCharset;
-import static javax.ws.rs.core.MediaType.CHARSET_PARAMETER;
+import static jakarta.ws.rs.core.MediaType.CHARSET_PARAMETER;
 
 import java.util.Map;
 
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.MediaType;
 
 public final class MediaTypes {
 

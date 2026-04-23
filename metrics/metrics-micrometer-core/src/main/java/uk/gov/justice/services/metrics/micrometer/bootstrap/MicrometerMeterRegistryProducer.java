@@ -2,9 +2,9 @@ package uk.gov.justice.services.metrics.micrometer.bootstrap;
 
 import uk.gov.justice.services.metrics.micrometer.config.MetricsConfiguration;
 
-import javax.enterprise.inject.Produces;
-import javax.inject.Inject;
-import javax.inject.Singleton;
+import jakarta.enterprise.inject.Produces;
+import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
 
 import io.micrometer.azuremonitor.AzureMonitorMeterRegistry;
 import io.micrometer.core.instrument.composite.CompositeMeterRegistry;

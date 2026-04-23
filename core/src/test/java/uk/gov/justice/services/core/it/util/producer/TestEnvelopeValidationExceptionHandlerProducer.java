@@ -4,7 +4,7 @@ package uk.gov.justice.services.core.it.util.producer;
 import uk.gov.justice.services.core.envelope.EnvelopeValidationExceptionHandler;
 import uk.gov.justice.services.core.envelope.RethrowingValidationExceptionHandler;
 
-import javax.enterprise.inject.Produces;
+import jakarta.enterprise.inject.Produces;
 
 public class TestEnvelopeValidationExceptionHandlerProducer {
 

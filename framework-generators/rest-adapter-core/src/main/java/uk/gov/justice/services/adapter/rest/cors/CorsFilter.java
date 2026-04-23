@@ -1,6 +1,6 @@
 package uk.gov.justice.services.adapter.rest.cors;
 
-import static javax.ws.rs.HttpMethod.OPTIONS;
+import static jakarta.ws.rs.HttpMethod.OPTIONS;
 import static uk.gov.justice.services.adapter.rest.cors.CorsHeaders.ACCESS_CONTROL_ALLOW_CREDENTIALS;
 import static uk.gov.justice.services.adapter.rest.cors.CorsHeaders.ACCESS_CONTROL_ALLOW_HEADERS;
 import static uk.gov.justice.services.adapter.rest.cors.CorsHeaders.ACCESS_CONTROL_ALLOW_METHODS;
@@ -15,14 +15,14 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.ws.rs.ForbiddenException;
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.container.ContainerRequestFilter;
-import javax.ws.rs.container.ContainerResponseContext;
-import javax.ws.rs.container.ContainerResponseFilter;
-import javax.ws.rs.container.PreMatching;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.ResponseBuilder;
+import jakarta.ws.rs.ForbiddenException;
+import jakarta.ws.rs.container.ContainerRequestContext;
+import jakarta.ws.rs.container.ContainerRequestFilter;
+import jakarta.ws.rs.container.ContainerResponseContext;
+import jakarta.ws.rs.container.ContainerResponseFilter;
+import jakarta.ws.rs.container.PreMatching;
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.Response.ResponseBuilder;
 
 /**
  * JAX-RS filter for adding CORS headers for API layer service components.

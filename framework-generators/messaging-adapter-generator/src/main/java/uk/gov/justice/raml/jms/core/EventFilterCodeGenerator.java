@@ -9,7 +9,7 @@ import static uk.gov.justice.services.generators.commons.helper.Names.namesListS
 
 import uk.gov.justice.services.event.buffer.api.AbstractEventFilter;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 import com.squareup.javapoet.TypeSpec;
 import org.raml.model.Resource;

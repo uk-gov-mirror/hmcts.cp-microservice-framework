@@ -6,8 +6,8 @@ import static java.util.Optional.of;
 
 import uk.gov.justice.services.jdbc.persistence.JndiAppNameProvider;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class DefaultEventSourceDefinitionFactory {

@@ -10,8 +10,8 @@ import uk.gov.justice.services.healthcheck.api.Healthcheck;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
+import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
 
 import org.slf4j.Logger;
 

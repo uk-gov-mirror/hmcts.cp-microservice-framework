@@ -11,9 +11,9 @@ import uk.gov.justice.services.generators.commons.helper.RestResourceBaseUri;
 import java.util.Collection;
 import java.util.Set;
 
-import javax.inject.Inject;
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.ApplicationPath;
+import jakarta.ws.rs.core.Application;
 
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.ClassName;

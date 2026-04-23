@@ -1,7 +1,7 @@
 package uk.gov.justice.services.adapters.rest.helper;
 
-import static javax.ws.rs.core.MediaType.APPLICATION_FORM_URLENCODED;
-import static javax.ws.rs.core.MediaType.MULTIPART_FORM_DATA;
+import static jakarta.ws.rs.core.MediaType.APPLICATION_FORM_URLENCODED;
+import static jakarta.ws.rs.core.MediaType.MULTIPART_FORM_DATA;
 
 import org.raml.model.MimeType;
 

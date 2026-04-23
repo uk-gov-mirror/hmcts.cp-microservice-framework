@@ -12,7 +12,7 @@ import uk.gov.justice.services.generators.commons.helper.MessagingClientBaseUri;
 import uk.gov.justice.services.generators.commons.helper.MessagingResourceUri;
 import uk.gov.justice.services.messaging.jms.JmsEnvelopeSender;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import com.google.common.collect.ImmutableList;
 import com.squareup.javapoet.CodeBlock;

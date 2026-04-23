@@ -3,9 +3,9 @@ package uk.gov.justice.services.core.handler.registry;
 import uk.gov.justice.services.common.util.LazyValue;
 import uk.gov.justice.services.core.featurecontrol.FeatureControlAnnotationFinder;
 
-import javax.enterprise.inject.Produces;
-import javax.inject.Inject;
-import javax.inject.Singleton;
+import jakarta.enterprise.inject.Produces;
+import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
 
 @Singleton
 public class HandlerRegistryCacheProducer {

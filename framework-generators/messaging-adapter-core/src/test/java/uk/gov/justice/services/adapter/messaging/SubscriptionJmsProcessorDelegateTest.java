@@ -14,9 +14,9 @@ import uk.gov.justice.services.messaging.jms.EnvelopeConverter;
 import uk.gov.justice.services.messaging.logging.JmsMessageLoggerHelper;
 import uk.gov.justice.services.subscription.SubscriptionManager;
 
-import javax.jms.JMSException;
-import javax.jms.ObjectMessage;
-import javax.jms.TextMessage;
+import jakarta.jms.JMSException;
+import jakarta.jms.ObjectMessage;
+import jakarta.jms.TextMessage;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

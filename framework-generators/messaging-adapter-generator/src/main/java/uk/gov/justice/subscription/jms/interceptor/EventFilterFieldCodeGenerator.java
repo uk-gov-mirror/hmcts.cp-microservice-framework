@@ -2,7 +2,7 @@ package uk.gov.justice.subscription.jms.interceptor;
 
 import static javax.lang.model.element.Modifier.PRIVATE;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.FieldSpec;

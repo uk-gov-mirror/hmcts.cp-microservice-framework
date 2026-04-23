@@ -22,8 +22,8 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 import java.util.List;
 import java.util.Optional;
 
-import javax.jms.JMSException;
-import javax.jms.MessageConsumer;
+import jakarta.jms.JMSException;
+import jakarta.jms.MessageConsumer;
 
 import io.restassured.path.json.JsonPath;
 import org.junit.jupiter.api.BeforeEach;

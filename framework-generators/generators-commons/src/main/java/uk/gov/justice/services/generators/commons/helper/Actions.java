@@ -19,7 +19,7 @@ import org.raml.model.Response;
 
 public final class Actions {
 
-    private static final String ACCEPTED = valueOf(javax.ws.rs.core.Response.Status.ACCEPTED.getStatusCode());
+    private static final String ACCEPTED = valueOf(jakarta.ws.rs.core.Response.Status.ACCEPTED.getStatusCode());
 
     private Actions() {
     }

@@ -1,6 +1,6 @@
 package uk.gov.justice.services.core.enveloper.spi;
 
-import static javax.enterprise.inject.spi.CDI.current;
+import static jakarta.enterprise.inject.spi.CDI.current;
 
 import uk.gov.justice.services.core.enveloper.DefaultEnveloper;
 import uk.gov.justice.services.core.enveloper.Enveloper;

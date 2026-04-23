@@ -1,7 +1,7 @@
 package uk.gov.justice.api.resource;
 
-import static javax.ws.rs.core.Response.Status.ACCEPTED;
-import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
+import static jakarta.ws.rs.core.Response.Status.ACCEPTED;
+import static jakarta.ws.rs.core.Response.Status.BAD_REQUEST;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
@@ -64,8 +64,8 @@ import uk.gov.justice.subscription.domain.eventsource.DefaultEventSourceDefiniti
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -193,7 +193,7 @@ public class DefaultCustomUserIdResourceIT {
         return new WebApp()
                 .contextRoot("rest-adapter-generator")
                 .addServlet("DefaultCustomUserIdResourceIT", Application.class.getName())
-                .addInitParam("DefaultCustomUserIdResourceIT", "javax.ws.rs.Application", CustomApiRestExampleApplication.class.getName());
+                .addInitParam("DefaultCustomUserIdResourceIT", "jakarta.ws.rs.Application", CustomApiRestExampleApplication.class.getName());
     }
 
     @Test

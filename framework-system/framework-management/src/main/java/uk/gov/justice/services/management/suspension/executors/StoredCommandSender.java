@@ -1,6 +1,6 @@
 package uk.gov.justice.services.management.suspension.executors;
 
-import static javax.transaction.Transactional.TxType.REQUIRES_NEW;
+import static jakarta.transaction.Transactional.TxType.REQUIRES_NEW;
 
 import uk.gov.justice.services.messaging.JsonEnvelope;
 import uk.gov.justice.services.messaging.JsonObjectEnvelopeConverter;
@@ -8,8 +8,8 @@ import uk.gov.justice.services.messaging.jms.JmsSender;
 import uk.gov.justice.services.shuttering.domain.StoredCommand;
 import uk.gov.justice.services.shuttering.persistence.StoredCommandRepository;
 
-import javax.inject.Inject;
-import javax.transaction.Transactional;
+import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 
 public class StoredCommandSender {
 

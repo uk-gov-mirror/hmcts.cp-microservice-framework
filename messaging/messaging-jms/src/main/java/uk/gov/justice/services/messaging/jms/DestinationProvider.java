@@ -4,8 +4,8 @@ import static java.lang.String.format;
 
 import uk.gov.justice.services.messaging.jms.exception.JmsEnvelopeSenderException;
 
-import javax.inject.Inject;
-import javax.jms.Destination;
+import jakarta.inject.Inject;
+import jakarta.jms.Destination;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 

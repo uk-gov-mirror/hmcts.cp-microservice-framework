@@ -57,19 +57,19 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.json.JsonObject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.HttpHeaders;
-import javax.ws.rs.core.Response;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+import jakarta.json.JsonObject;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.DELETE;
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.PUT;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.core.HttpHeaders;
+import jakarta.ws.rs.core.Response;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -379,7 +379,7 @@ public class RestAdapterGenerator_CodeStructureTest extends BaseRestAdapterGener
         assertThat(methods, hasSize(1));
         final Method method = methods.get(0);
         assertThat(method.getReturnType(), equalTo(Response.class));
-        assertThat(method.getAnnotation(javax.ws.rs.GET.class), not(nullValue()));
+        assertThat(method.getAnnotation(jakarta.ws.rs.GET.class), not(nullValue()));
         assertThat(method.getAnnotation(Produces.class), not(nullValue()));
         assertThat(method.getAnnotation(Produces.class).value(),
                 is(new String[]{"application/vnd.ctx.query.query1+json"}));
@@ -414,7 +414,7 @@ public class RestAdapterGenerator_CodeStructureTest extends BaseRestAdapterGener
         assertThat(methods, hasSize(1));
         final Method method = methods.get(0);
         assertThat(method.getReturnType(), equalTo(Response.class));
-        assertThat(method.getAnnotation(javax.ws.rs.GET.class), not(nullValue()));
+        assertThat(method.getAnnotation(jakarta.ws.rs.GET.class), not(nullValue()));
         assertThat(method.getAnnotation(Produces.class), not(nullValue()));
         assertThat(method.getAnnotation(Produces.class).value(),
                 arrayContainingInAnyOrder("application/vnd.ctx.query.query1+json", "application/vnd.ctx.query.query2+json"));
@@ -1092,7 +1092,7 @@ public class RestAdapterGenerator_CodeStructureTest extends BaseRestAdapterGener
         final Field dispatcher = resourceClass.getDeclaredField("headers");
         assertThat(dispatcher, not(nullValue()));
         assertThat(dispatcher.getType(), equalTo(HttpHeaders.class));
-        assertThat(dispatcher.getAnnotation(javax.ws.rs.core.Context.class), not(nullValue()));
+        assertThat(dispatcher.getAnnotation(jakarta.ws.rs.core.Context.class), not(nullValue()));
         assertThat(dispatcher.getModifiers(), is(0));
     }
 

@@ -7,7 +7,7 @@
     <parent>
         <groupId>uk.gov.justice.services</groupId>
         <artifactId>test-utils</artifactId>
-        <version>17.105.0-M7-SNAPSHOT</version>
+        <version>21.0.0-SNAPSHOT</version>
     </parent>
 
     <groupId>uk.gov.justice.utils</groupId>
@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.activemq</groupId>
-            <artifactId>artemis-jms-client</artifactId>
+            <artifactId>artemis-jakarta-client</artifactId>
         </dependency>
         <dependency>
             <groupId>uk.gov.justice.services</groupId>

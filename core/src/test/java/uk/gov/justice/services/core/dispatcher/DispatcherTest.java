@@ -19,7 +19,7 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 import uk.gov.justice.services.messaging.Metadata;
 import uk.gov.justice.services.test.utils.common.envelope.TestEnvelopeRecorder;
 
-import javax.json.JsonValue;
+import jakarta.json.JsonValue;
 import java.util.List;
 
 import static com.jayway.jsonassert.impl.matcher.IsCollectionWithSize.hasSize;

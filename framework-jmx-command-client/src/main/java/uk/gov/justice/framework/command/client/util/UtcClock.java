@@ -4,7 +4,7 @@ import static java.time.ZoneOffset.UTC;
 
 import java.time.ZonedDateTime;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 /**
  * Implementation of a clock that always generates a {@link ZonedDateTime} in UTC.

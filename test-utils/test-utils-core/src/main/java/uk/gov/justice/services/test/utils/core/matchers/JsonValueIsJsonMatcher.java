@@ -2,7 +2,7 @@ package uk.gov.justice.services.test.utils.core.matchers;
 
 import static java.lang.String.format;
 
-import javax.json.JsonValue;
+import jakarta.json.JsonValue;
 
 import com.jayway.jsonpath.ReadContext;
 import com.jayway.jsonpath.matchers.IsJson;

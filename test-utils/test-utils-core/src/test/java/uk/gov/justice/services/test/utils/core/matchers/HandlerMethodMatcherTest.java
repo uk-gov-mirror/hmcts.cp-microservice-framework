@@ -16,7 +16,7 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 import java.time.ZonedDateTime;
 import java.util.UUID;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.junit.jupiter.api.Test;
 

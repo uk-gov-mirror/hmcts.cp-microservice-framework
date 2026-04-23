@@ -9,7 +9,7 @@ import uk.gov.justice.services.healthcheck.api.HealthcheckResult;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 import javax.sql.DataSource;
 
 public class TableChecker {

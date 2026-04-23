@@ -9,6 +9,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import static uk.gov.justice.services.core.annotation.Component.COMMAND_API;
 import static uk.gov.justice.services.core.annotation.Component.COMMAND_CONTROLLER;
 import static uk.gov.justice.services.core.annotation.Component.COMMAND_HANDLER;
@@ -31,11 +32,11 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 import java.util.HashSet;
 
-import javax.enterprise.inject.spi.AfterDeploymentValidation;
-import javax.enterprise.inject.spi.AnnotatedType;
-import javax.enterprise.inject.spi.Bean;
-import javax.enterprise.inject.spi.BeanManager;
-import javax.enterprise.inject.spi.ProcessAnnotatedType;
+import jakarta.enterprise.inject.spi.AfterDeploymentValidation;
+import jakarta.enterprise.inject.spi.AnnotatedType;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.BeanManager;
+import jakarta.enterprise.inject.spi.ProcessAnnotatedType;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -59,6 +60,9 @@ public class ServiceComponentScannerTest {
 
     @Mock
     private BeanManager beanManager;
+
+    @Mock
+    private jakarta.enterprise.event.Event<Object> event;
 
     private ServiceComponentScanner serviceComponentScanner;
 
@@ -114,7 +118,7 @@ public class ServiceComponentScannerTest {
 
         serviceComponentScanner.afterDeploymentValidation(NOT_USED_AFTER_DEPLOYMENT_VALIDATION, beanManager);
 
-        verify(beanManager, never()).fireEvent(any());
+        verify(event, never()).fire(any());
     }
 
     @Test
@@ -123,10 +127,11 @@ public class ServiceComponentScannerTest {
 
         doReturn(new HashSet<Bean<Object>>(asList(TestBean.of(TestDirectQueryViewAdapter.class), TestBean.of(TestDirectQueryApiHandler.class)))).when(beanManager).getBeans(any(), any());
         doReturn(new HashSet<Bean<Object>>(asList(TestBean.of(TestDirectQueryViewAdapter.class)))).when(beanManager).getBeans(SynchronousDirectAdapter.class);
+        when(beanManager.getEvent()).thenReturn(event);
 
         serviceComponentScanner.afterDeploymentValidation(NOT_USED_AFTER_DEPLOYMENT_VALIDATION, beanManager);
 
-        verify(beanManager).fireEvent(captor.capture());
+        verify(event).fire(captor.capture());
         assertThat(captor.getValue(), instanceOf(ServiceComponentFoundEvent.class));
         assertThat(captor.getValue().getHandlerBean().getBeanClass(), equalTo(TestDirectQueryApiHandler.class));
         assertThat(captor.getValue().getLocation(), equalTo(ServiceComponentLocation.REMOTE));
@@ -144,7 +149,7 @@ public class ServiceComponentScannerTest {
 
         serviceComponentScanner.afterDeploymentValidation(NOT_USED_AFTER_DEPLOYMENT_VALIDATION, beanManager);
 
-        verify(beanManager, never()).fireEvent(any());
+        verify(event, never()).fire(any());
     }
 
     @SuppressWarnings("serial")
@@ -164,10 +169,11 @@ public class ServiceComponentScannerTest {
     private void verifyIfServiceComponentFoundEventFiredWith(final Bean<Object> handler) {
         final ArgumentCaptor<ServiceComponentFoundEvent> captor = ArgumentCaptor.forClass(ServiceComponentFoundEvent.class);
         mockBeanManagerGetBeansWith(handler);
+        when(beanManager.getEvent()).thenReturn(event);
 
         serviceComponentScanner.afterDeploymentValidation(NOT_USED_AFTER_DEPLOYMENT_VALIDATION, beanManager);
 
-        verify(beanManager).fireEvent(captor.capture());
+        verify(event).fire(captor.capture());
         assertThat(captor.getValue(), instanceOf(ServiceComponentFoundEvent.class));
         assertThat(captor.getValue().getLocation(), equalTo(ServiceComponentLocation.LOCAL));
     }
@@ -176,10 +182,11 @@ public class ServiceComponentScannerTest {
     private void verifyIfRemoteServiceComponentFoundEventFiredWith(final Bean<Object> handler) {
         final ArgumentCaptor<ServiceComponentFoundEvent> captor = ArgumentCaptor.forClass(ServiceComponentFoundEvent.class);
         mockBeanManagerGetBeansWith(handler);
+        when(beanManager.getEvent()).thenReturn(event);
 
         serviceComponentScanner.afterDeploymentValidation(NOT_USED_AFTER_DEPLOYMENT_VALIDATION, beanManager);
 
-        verify(beanManager).fireEvent(captor.capture());
+        verify(event).fire(captor.capture());
         assertThat(captor.getAllValues(), hasSize(1));
         assertThat(captor.getValue(), instanceOf(ServiceComponentFoundEvent.class));
         assertThat(captor.getValue().getLocation(), equalTo(ServiceComponentLocation.REMOTE));
@@ -189,11 +196,12 @@ public class ServiceComponentScannerTest {
     private void verifyIfEventFoundEventFiredWith(final ProcessAnnotatedType processAnnotatedType) {
         final ArgumentCaptor<EventFoundEvent> captor = ArgumentCaptor.forClass(EventFoundEvent.class);
         mockProcessAnnotatedType();
+        when(beanManager.getEvent()).thenReturn(event);
 
         serviceComponentScanner.processAnnotatedType(processAnnotatedType);
         serviceComponentScanner.afterDeploymentValidation(NOT_USED_AFTER_DEPLOYMENT_VALIDATION, beanManager);
 
-        verify(beanManager).fireEvent(captor.capture());
+        verify(event).fire(captor.capture());
         assertThat(captor.getValue(), instanceOf(EventFoundEvent.class));
     }
 

@@ -9,9 +9,9 @@ import static uk.gov.justice.services.core.annotation.Component.EVENT_PROCESSOR;
 
 import java.util.Optional;
 
-import javax.jms.Destination;
-import javax.jms.Queue;
-import javax.jms.Topic;
+import jakarta.jms.Destination;
+import jakarta.jms.Queue;
+import jakarta.jms.Topic;
 
 import org.junit.jupiter.api.Test;
 

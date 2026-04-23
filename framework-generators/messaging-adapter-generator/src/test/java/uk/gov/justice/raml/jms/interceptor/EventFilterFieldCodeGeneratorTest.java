@@ -23,6 +23,6 @@ public class EventFilterFieldCodeGeneratorTest {
 
         final FieldSpec eventFilterField = eventFilterFieldCodeGenerator.createEventFilterField(customEventFilterClassName);
 
-        assertThat(eventFilterField.toString(), is("@javax.inject.Inject\nprivate org.acme.MyCustomEventFilter eventFilter;\n"));
+        assertThat(eventFilterField.toString(), is("@jakarta.inject.Inject\nprivate org.acme.MyCustomEventFilter eventFilter;\n"));
     }
 }

@@ -3,7 +3,7 @@ package uk.gov.justice.services.jmx.command;
 import uk.gov.justice.services.common.configuration.subscription.pull.EventPullConfiguration;
 import uk.gov.justice.services.jmx.api.command.SystemCommand;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class DisabledCommandChecker {
 

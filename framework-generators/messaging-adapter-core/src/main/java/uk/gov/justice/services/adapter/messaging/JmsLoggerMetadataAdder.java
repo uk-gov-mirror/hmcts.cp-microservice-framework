@@ -5,10 +5,10 @@ import uk.gov.justice.services.common.configuration.ServiceContextNameProvider;
 import uk.gov.justice.services.messaging.logging.JmsMessageLoggerHelper;
 import uk.gov.justice.services.messaging.logging.TraceLogger;
 
-import javax.inject.Inject;
-import javax.interceptor.InvocationContext;
-import javax.jms.TextMessage;
-import javax.json.JsonObjectBuilder;
+import jakarta.inject.Inject;
+import jakarta.interceptor.InvocationContext;
+import jakarta.jms.TextMessage;
+import jakarta.json.JsonObjectBuilder;
 import java.util.Optional;
 
 import static uk.gov.justice.services.common.log.LoggerConstants.METADATA;

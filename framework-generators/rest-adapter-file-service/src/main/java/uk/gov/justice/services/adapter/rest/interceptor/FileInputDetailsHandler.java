@@ -2,9 +2,9 @@ package uk.gov.justice.services.adapter.rest.interceptor;
 
 import uk.gov.justice.services.adapter.rest.multipart.FileInputDetails;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.json.JsonObject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.json.JsonObject;
 import java.util.UUID;
 
 import static uk.gov.justice.services.messaging.JsonObjects.getJsonBuilderFactory;

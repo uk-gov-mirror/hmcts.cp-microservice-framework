@@ -27,9 +27,9 @@ public class RemoteMessagingClientCodeGeneratorTest {
                     "@uk.gov.justice.services.core.annotation.FrameworkComponent(\"EVENT_LISTENER\")\n" +
                     "public final class TestClassName {\n" +
                     "  private static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(org.test.TestClassName.class);\n\n" +
-                    "  @javax.inject.Inject\n" +
+                    "  @jakarta.inject.Inject\n" +
                     "  uk.gov.justice.services.messaging.jms.JmsEnvelopeSender sender;\n\n" +
-                    "  @javax.inject.Inject\n" +
+                    "  @jakarta.inject.Inject\n" +
                     "  uk.gov.justice.services.messaging.logging.TraceLogger traceLogger;\n" +
                     "}\n";
 

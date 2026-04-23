@@ -5,10 +5,10 @@ import static uk.gov.justice.services.test.utils.core.messaging.QueueUriProvider
 
 import uk.gov.justice.services.messaging.JsonEnvelope;
 
-import javax.jms.JMSException;
-import javax.jms.MessageProducer;
-import javax.jms.TextMessage;
-import javax.json.JsonObject;
+import jakarta.jms.JMSException;
+import jakarta.jms.MessageProducer;
+import jakarta.jms.TextMessage;
+import jakarta.json.JsonObject;
 
 /**
  * Use {@link JmsMessageProducerClientProvider} to create instance

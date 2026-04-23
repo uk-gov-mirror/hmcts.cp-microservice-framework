@@ -8,7 +8,7 @@ import static org.mockito.Mockito.when;
 
 import uk.gov.justice.services.messaging.jms.exception.JmsEnvelopeSenderException;
 
-import javax.jms.Destination;
+import jakarta.jms.Destination;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 

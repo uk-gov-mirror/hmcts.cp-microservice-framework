@@ -17,9 +17,9 @@ import uk.gov.justice.subscription.jms.core.JmsUriToDestinationTypeConverter;
 
 import java.util.Optional;
 
-import javax.jms.Destination;
-import javax.jms.Queue;
-import javax.jms.Topic;
+import jakarta.jms.Destination;
+import jakarta.jms.Queue;
+import jakarta.jms.Topic;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

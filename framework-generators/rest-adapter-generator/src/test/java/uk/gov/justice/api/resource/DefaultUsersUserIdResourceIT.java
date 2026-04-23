@@ -1,10 +1,10 @@
 package uk.gov.justice.api.resource;
 
 import static com.jayway.jsonassert.JsonAssert.with;
-import static javax.ws.rs.core.Response.Status.ACCEPTED;
-import static javax.ws.rs.core.Response.Status.BAD_REQUEST;
-import static javax.ws.rs.core.Response.Status.NOT_ACCEPTABLE;
-import static javax.ws.rs.core.Response.Status.OK;
+import static jakarta.ws.rs.core.Response.Status.ACCEPTED;
+import static jakarta.ws.rs.core.Response.Status.BAD_REQUEST;
+import static jakarta.ws.rs.core.Response.Status.NOT_ACCEPTABLE;
+import static jakarta.ws.rs.core.Response.Status.OK;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
@@ -72,9 +72,9 @@ import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.util.Properties;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.json.JsonObject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.json.JsonObject;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpDelete;
@@ -215,7 +215,7 @@ public class DefaultUsersUserIdResourceIT {
         return new WebApp()
                 .contextRoot("rest-adapter-generator")
                 .addServlet("DefaultUsersUserIdResourceIT", Application.class.getName())
-                .addInitParam("DefaultUsersUserIdResourceIT", "javax.ws.rs.Application", QueryApiRestExampleApplication.class.getName());
+                .addInitParam("DefaultUsersUserIdResourceIT", "jakarta.ws.rs.Application", QueryApiRestExampleApplication.class.getName());
     }
 
     @Test

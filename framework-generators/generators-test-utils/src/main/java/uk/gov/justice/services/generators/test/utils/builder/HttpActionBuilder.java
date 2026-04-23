@@ -3,7 +3,7 @@ package uk.gov.justice.services.generators.test.utils.builder;
 import static java.lang.String.format;
 import static java.lang.String.valueOf;
 import static java.util.Arrays.stream;
-import static javax.ws.rs.core.Response.Status.OK;
+import static jakarta.ws.rs.core.Response.Status.OK;
 import static org.raml.model.ActionType.DELETE;
 import static org.raml.model.ActionType.GET;
 import static org.raml.model.ActionType.PATCH;

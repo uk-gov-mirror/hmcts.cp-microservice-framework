@@ -4,7 +4,7 @@ import static java.lang.String.format;
 
 import java.net.URL;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class UnifiedSearchFileFinder {

@@ -2,8 +2,8 @@ package uk.gov.justice.services.metrics.micrometer.prometheus;
 
 import static io.micrometer.prometheusmetrics.PrometheusConfig.DEFAULT;
 
-import javax.enterprise.inject.Produces;
-import javax.inject.Singleton;
+import jakarta.enterprise.inject.Produces;
+import jakarta.inject.Singleton;
 
 import io.micrometer.prometheusmetrics.PrometheusMeterRegistry;
 

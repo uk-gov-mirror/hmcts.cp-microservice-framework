@@ -21,7 +21,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Optional;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

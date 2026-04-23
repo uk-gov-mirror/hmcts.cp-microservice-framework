@@ -7,7 +7,7 @@ import uk.gov.justice.services.core.sender.Sender;
 import uk.gov.justice.services.messaging.Envelope;
 import uk.gov.justice.services.messaging.JsonEnvelope;
 
-import javax.json.JsonValue;
+import jakarta.json.JsonValue;
 
 public class DispatcherDelegate implements Requester, Sender {
 

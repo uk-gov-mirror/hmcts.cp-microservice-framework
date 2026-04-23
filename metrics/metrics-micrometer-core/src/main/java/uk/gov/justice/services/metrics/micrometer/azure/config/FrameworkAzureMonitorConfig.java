@@ -2,7 +2,7 @@ package uk.gov.justice.services.metrics.micrometer.azure.config;
 
 import uk.gov.justice.services.metrics.micrometer.config.MetricsConfiguration;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import io.micrometer.azuremonitor.AzureMonitorConfig;
 import io.micrometer.common.lang.Nullable;

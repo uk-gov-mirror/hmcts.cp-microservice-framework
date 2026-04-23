@@ -5,8 +5,8 @@ import static java.util.Optional.ofNullable;
 import java.util.Map;
 import java.util.Optional;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 /**
  * Constructs a cache of action name to media type from the List of {@link ActionNameToMediaTypesMapper}

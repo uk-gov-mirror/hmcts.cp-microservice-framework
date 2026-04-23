@@ -1,19 +1,19 @@
 package uk.gov.justice.services.adapter.rest.processor.response;
 
 import static java.lang.String.format;
-import static javax.json.JsonValue.NULL;
-import static javax.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR;
-import static javax.ws.rs.core.Response.Status.NOT_FOUND;
-import static javax.ws.rs.core.Response.status;
+import static jakarta.json.JsonValue.NULL;
+import static jakarta.ws.rs.core.Response.Status.INTERNAL_SERVER_ERROR;
+import static jakarta.ws.rs.core.Response.Status.NOT_FOUND;
+import static jakarta.ws.rs.core.Response.status;
 
 import uk.gov.justice.services.messaging.JsonEnvelope;
 
 import java.util.Optional;
 import java.util.function.Function;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.ws.rs.core.Response;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.core.Response;
 
 import org.slf4j.Logger;
 

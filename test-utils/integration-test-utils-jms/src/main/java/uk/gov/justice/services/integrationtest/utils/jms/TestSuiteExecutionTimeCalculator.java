@@ -6,7 +6,7 @@ import com.google.common.annotations.VisibleForTesting;
 import org.apache.commons.lang3.time.StopWatch;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
-public class TestSuiteExecutionTimeCalculator implements ExtensionContext.Store.CloseableResource  {
+public class TestSuiteExecutionTimeCalculator implements ExtensionContext.Store.CloseableResource, AutoCloseable {
 
     private final StopWatch stopWatch;
 

@@ -2,7 +2,7 @@ package uk.gov.justice.services.adapter.messaging;
 
 import static java.lang.String.format;
 
-import javax.jms.TextMessage;
+import jakarta.jms.TextMessage;
 
 /**
  * Checks the parameters received by a JMS Interceptor

@@ -2,8 +2,8 @@ package uk.gov.justice.services.adapter.messaging;
 
 import uk.gov.justice.services.subscription.SubscriptionManager;
 
-import javax.inject.Inject;
-import javax.jms.Message;
+import jakarta.inject.Inject;
+import jakarta.jms.Message;
 
 /**
  * In order to minimise the amount of generated code in the JMS Listener implementation classes,

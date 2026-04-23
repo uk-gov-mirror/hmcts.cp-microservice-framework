@@ -2,7 +2,7 @@ package uk.gov.justice.services.core.handler.registry;
 
 import uk.gov.justice.services.core.featurecontrol.FeatureControlAnnotationFinder;
 
-import javax.enterprise.inject.Produces;
+import jakarta.enterprise.inject.Produces;
 
 /**
  * Test version of HandlerRegistryCacheProducer to stop open ejb freaking out about

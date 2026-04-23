@@ -13,7 +13,7 @@ import uk.gov.justice.services.core.interceptor.InterceptorContext;
 
 import java.util.List;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.slf4j.Logger;
 

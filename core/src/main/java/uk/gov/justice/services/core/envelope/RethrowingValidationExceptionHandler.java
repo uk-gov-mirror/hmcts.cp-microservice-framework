@@ -1,6 +1,6 @@
 package uk.gov.justice.services.core.envelope;
 
-import javax.enterprise.inject.Alternative;
+import jakarta.enterprise.inject.Alternative;
 
 @Alternative
 public class RethrowingValidationExceptionHandler implements EnvelopeValidationExceptionHandler {

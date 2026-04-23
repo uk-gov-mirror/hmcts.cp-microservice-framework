@@ -6,7 +6,7 @@ import static org.hamcrest.core.Is.is;
 import static uk.gov.justice.services.test.utils.common.MemberInjectionPoint.injectionPointWith;
 import static uk.gov.justice.services.test.utils.common.MemberInjectionPoint.injectionPointWithMemberAsFirstMethodOf;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.junit.jupiter.api.Test;
 

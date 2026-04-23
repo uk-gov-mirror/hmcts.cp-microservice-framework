@@ -21,7 +21,7 @@ import uk.gov.justice.services.unifiedsearch.UnifiedSearchName;
 import java.util.List;
 import java.util.stream.Stream;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.ClassName;

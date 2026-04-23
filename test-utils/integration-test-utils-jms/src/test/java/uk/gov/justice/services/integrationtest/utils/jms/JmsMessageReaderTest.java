@@ -13,9 +13,9 @@ import uk.gov.justice.services.integrationtest.utils.jms.converters.ToStringMess
 
 import java.util.Optional;
 
-import javax.jms.JMSException;
-import javax.jms.MessageConsumer;
-import javax.jms.TextMessage;
+import jakarta.jms.JMSException;
+import jakarta.jms.MessageConsumer;
+import jakarta.jms.TextMessage;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

@@ -6,7 +6,7 @@ import uk.gov.justice.services.core.mapping.MediaTypeToSchemaIdMapper;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.enterprise.inject.Default;
+import jakarta.enterprise.inject.Default;
 
 @Default
 public class TestMediaTypeToSchemaIdMapper implements MediaTypeToSchemaIdMapper {

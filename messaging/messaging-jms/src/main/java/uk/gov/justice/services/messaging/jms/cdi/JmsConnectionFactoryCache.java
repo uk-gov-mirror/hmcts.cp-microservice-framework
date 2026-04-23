@@ -3,9 +3,9 @@ package uk.gov.justice.services.messaging.jms.cdi;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
-import javax.jms.ConnectionFactory;
+import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
+import jakarta.jms.ConnectionFactory;
 
 @Singleton
 public class JmsConnectionFactoryCache {

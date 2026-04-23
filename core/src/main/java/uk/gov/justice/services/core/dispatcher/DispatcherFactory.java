@@ -3,7 +3,7 @@ package uk.gov.justice.services.core.dispatcher;
 import uk.gov.justice.services.core.annotation.ServiceComponentLocation;
 import uk.gov.justice.services.core.handler.registry.HandlerRegistryCache;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class DispatcherFactory {
 

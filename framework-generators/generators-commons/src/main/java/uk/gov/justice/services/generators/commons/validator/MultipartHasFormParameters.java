@@ -1,7 +1,7 @@
 package uk.gov.justice.services.generators.commons.validator;
 
 import static java.lang.String.format;
-import static javax.ws.rs.core.MediaType.MULTIPART_FORM_DATA;
+import static jakarta.ws.rs.core.MediaType.MULTIPART_FORM_DATA;
 
 import java.util.List;
 import java.util.Map;

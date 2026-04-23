@@ -108,13 +108,13 @@ public class UnifiedSearchClientGeneratorTest {
 
         assertThat(unifiedSearchIndexer1, not(nullValue()));
         assertThat(unifiedSearchIndexer1.getType(), equalTo(UnifiedSearchIndexer.class));
-        assertThat(annotationInject1.annotationType().getName(), equalTo("javax.inject.Inject"));
+        assertThat(annotationInject1.annotationType().getName(), equalTo("jakarta.inject.Inject"));
         assertThat(annotationUnifiedSearchName1.annotationType(), equalTo(UnifiedSearchName.class));
         assertThat(((UnifiedSearchName) annotationUnifiedSearchName1).value(), is("recipe_details1"));
 
         assertThat(unifiedSearchIndexer2, not(nullValue()));
         assertThat(unifiedSearchIndexer2.getType(), equalTo(UnifiedSearchIndexer.class));
-        assertThat(annotationInject2.annotationType().getName(), equalTo("javax.inject.Inject"));
+        assertThat(annotationInject2.annotationType().getName(), equalTo("jakarta.inject.Inject"));
         assertThat(annotationUnifiedSearchName2.annotationType(), equalTo(UnifiedSearchName.class));
         assertThat(((UnifiedSearchName) annotationUnifiedSearchName2).value(), is("recipe_details2"));
 

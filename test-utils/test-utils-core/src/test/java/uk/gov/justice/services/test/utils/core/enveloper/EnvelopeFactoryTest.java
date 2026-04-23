@@ -3,7 +3,7 @@ package uk.gov.justice.services.test.utils.core.enveloper;
 import org.junit.jupiter.api.Test;
 import uk.gov.justice.services.messaging.JsonEnvelope;
 
-import javax.json.JsonObject;
+import jakarta.json.JsonObject;
 
 import static com.jayway.jsonpath.matchers.JsonPathMatchers.withJsonPath;
 import static org.hamcrest.CoreMatchers.equalTo;

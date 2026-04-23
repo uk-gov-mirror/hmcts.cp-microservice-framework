@@ -1,8 +1,8 @@
 package uk.gov.justice.services.integrationtest.utils.jms;
 
-import javax.jms.JMSException;
-import javax.jms.MessageConsumer;
-import javax.jms.Session;
+import jakarta.jms.JMSException;
+import jakarta.jms.MessageConsumer;
+import jakarta.jms.Session;
 
 import org.apache.activemq.artemis.jms.client.ActiveMQTopic;
 

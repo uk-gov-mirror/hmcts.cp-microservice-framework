@@ -6,8 +6,8 @@ import uk.gov.justice.services.jmx.api.command.SystemCommand;
 
 import java.util.List;
 
-import javax.annotation.Priority;
-import javax.enterprise.inject.Alternative;
+import jakarta.annotation.Priority;
+import jakarta.enterprise.inject.Alternative;
 
 @Alternative
 @Priority(1)

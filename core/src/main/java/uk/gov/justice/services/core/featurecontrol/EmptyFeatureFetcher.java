@@ -6,7 +6,7 @@ import uk.gov.justice.services.core.featurecontrol.domain.Feature;
 
 import java.util.List;
 
-import javax.enterprise.inject.Default;
+import jakarta.enterprise.inject.Default;
 
 /**
  * Default implementation of FeatureFetcher to allow integration tests to run without the need

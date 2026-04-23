@@ -5,8 +5,8 @@ import uk.gov.justice.services.core.mapping.MediaType;
 
 import java.util.Optional;
 
-import javax.enterprise.inject.Default;
-import javax.faces.bean.ApplicationScoped;
+import jakarta.enterprise.inject.Default;
+import jakarta.enterprise.context.ApplicationScoped;
 
 /**
  * Service for validating JSON payloads against a schema contained in a catalog.

@@ -3,9 +3,9 @@ package uk.gov.justice.services.adapters.rest.generator;
 import org.junit.jupiter.api.Test;
 import uk.gov.justice.services.generators.commons.config.CommonGeneratorProperties;
 
-import javax.json.JsonObject;
-import javax.ws.rs.core.HttpHeaders;
-import javax.ws.rs.core.Response;
+import jakarta.json.JsonObject;
+import jakarta.ws.rs.core.HttpHeaders;
+import jakarta.ws.rs.core.Response;
 import java.lang.reflect.Method;
 import java.util.Collection;
 import java.util.Optional;

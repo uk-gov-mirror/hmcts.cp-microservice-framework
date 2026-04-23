@@ -7,7 +7,7 @@ import uk.gov.justice.services.core.envelope.MediaTypeProvider;
 import uk.gov.justice.services.core.envelope.RequestResponseEnvelopeValidator;
 import uk.gov.justice.services.core.mapping.NameToMediaTypeConverter;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class RequestResponseEnvelopeValidatorFactory {
 

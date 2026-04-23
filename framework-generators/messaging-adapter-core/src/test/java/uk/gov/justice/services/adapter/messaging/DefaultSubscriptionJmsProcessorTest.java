@@ -5,7 +5,7 @@ import static org.mockito.Mockito.verify;
 
 import uk.gov.justice.services.subscription.SubscriptionManager;
 
-import javax.jms.TextMessage;
+import jakarta.jms.TextMessage;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

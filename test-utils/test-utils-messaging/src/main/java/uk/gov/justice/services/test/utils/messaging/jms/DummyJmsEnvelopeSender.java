@@ -3,7 +3,7 @@ package uk.gov.justice.services.test.utils.messaging.jms;
 import uk.gov.justice.services.messaging.JsonEnvelope;
 import uk.gov.justice.services.messaging.jms.JmsEnvelopeSender;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class DummyJmsEnvelopeSender implements JmsEnvelopeSender {

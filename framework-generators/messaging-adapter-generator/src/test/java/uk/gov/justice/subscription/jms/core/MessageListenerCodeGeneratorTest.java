@@ -31,33 +31,33 @@ public class MessageListenerCodeGeneratorTest {
 
     private static final String DEFAULT_TOPIC_EVENT_PROCESSOR_TYPE_SPEC = """
             @uk.gov.justice.services.core.annotation.Adapter("EVENT_PROCESSOR")
-            @javax.ejb.MessageDriven(
+            @jakarta.ejb.MessageDriven(
                 activationConfig = {
-                    @javax.ejb.ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Topic"),
-                    @javax.ejb.ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "my-context.event"),
-                    @javax.ejb.ActivationConfigProperty(propertyName = "shareSubscriptions", propertyValue = "true"),
-                    @javax.ejb.ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "CPPNAME in('my-context.events.something-happened')"),
-                    @javax.ejb.ActivationConfigProperty(propertyName = "subscriptionDurability", propertyValue = "Durable"),
-                    @javax.ejb.ActivationConfigProperty(propertyName = "subscriptionName", propertyValue = "my-context.event.processor.my-context.event"),
-                    @javax.ejb.ActivationConfigProperty(propertyName = "maxSession", propertyValue = "${property.mdb.EVENT_PROCESSOR.maxSession:15}")
+                    @jakarta.ejb.ActivationConfigProperty(propertyName = "destinationType", propertyValue = "jakarta.jms.Topic"),
+                    @jakarta.ejb.ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "my-context.event"),
+                    @jakarta.ejb.ActivationConfigProperty(propertyName = "shareSubscriptions", propertyValue = "true"),
+                    @jakarta.ejb.ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "CPPNAME in('my-context.events.something-happened')"),
+                    @jakarta.ejb.ActivationConfigProperty(propertyName = "subscriptionDurability", propertyValue = "Durable"),
+                    @jakarta.ejb.ActivationConfigProperty(propertyName = "subscriptionName", propertyValue = "my-context.event.processor.my-context.event"),
+                    @jakarta.ejb.ActivationConfigProperty(propertyName = "maxSession", propertyValue = "${property.mdb.EVENT_PROCESSOR.maxSession:15}")
                 }
             )
-            @javax.interceptor.Interceptors({
+            @jakarta.interceptor.Interceptors({
                 uk.gov.moj.base.package.name.MyContextEventProcessorMyContextEventJmsLoggerMetadataInterceptor.class,
                 uk.gov.justice.services.adapter.messaging.JsonSchemaValidationInterceptor.class
             })
-            public class MyContextEventProcessorMyContextEventJmsListener implements javax.jms.MessageListener {
+            public class MyContextEventProcessorMyContextEventJmsListener implements jakarta.jms.MessageListener {
               private static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(uk.gov.moj.base.package.name.MyContextEventProcessorMyContextEventJmsListener.class);
                             
-              @javax.inject.Inject
+              @jakarta.inject.Inject
               @uk.gov.justice.services.subscription.annotation.SubscriptionName("subscription")
               uk.gov.justice.services.subscription.SubscriptionManager subscriptionManager;
                             
-              @javax.inject.Inject
+              @jakarta.inject.Inject
               uk.gov.justice.services.adapter.messaging.SubscriptionJmsProcessor subscriptionJmsProcessor;
                             
               @java.lang.Override
-              public void onMessage(javax.jms.Message message) {
+              public void onMessage(jakarta.jms.Message message) {
                 uk.gov.justice.services.messaging.logging.LoggerUtils.trace(LOGGER, () -> "Received JMS message");
                 subscriptionJmsProcessor.process(message, subscriptionManager);
               }
@@ -123,34 +123,34 @@ public class MessageListenerCodeGeneratorTest {
 
         assertThat(typeSpec.toString(), is("""
                 @uk.gov.justice.services.core.annotation.Adapter("EVENT_LISTENER")
-                @javax.ejb.MessageDriven(
+                @jakarta.ejb.MessageDriven(
                     activationConfig = {
-                        @javax.ejb.ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Topic"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "my-context.handler.command"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "shareSubscriptions", propertyValue = "true"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "subscriptionDurability", propertyValue = "Durable"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "subscriptionName", propertyValue = "my-context.event.listener.my-context.handler.command"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "maxSession", propertyValue = "${property.mdb.EVENT_LISTENER.maxSession:15}")
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "destinationType", propertyValue = "jakarta.jms.Topic"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "my-context.handler.command"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "shareSubscriptions", propertyValue = "true"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "subscriptionDurability", propertyValue = "Durable"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "subscriptionName", propertyValue = "my-context.event.listener.my-context.handler.command"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "maxSession", propertyValue = "${property.mdb.EVENT_LISTENER.maxSession:15}")
                     }
                 )
-                @javax.interceptor.Interceptors({
+                @jakarta.interceptor.Interceptors({
                     uk.gov.moj.base.package.name.MyContextEventListenerMyContextHandlerCommandJmsLoggerMetadataInterceptor.class,
                     uk.gov.moj.base.package.name.MyContextEventListenerMyContextHandlerCommandEventValidationInterceptor.class
                 })
                 @org.jboss.ejb3.annotation.Pool("my-context-handler-command-event-listener-pool")
                 @org.jboss.ejb3.annotation.DeliveryGroup("subscription-events")
-                public class MyContextEventListenerMyContextHandlerCommandJmsListener implements javax.jms.MessageListener {
+                public class MyContextEventListenerMyContextHandlerCommandJmsListener implements jakarta.jms.MessageListener {
                   private static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(uk.gov.moj.base.package.name.MyContextEventListenerMyContextHandlerCommandJmsListener.class);
                 
-                  @javax.inject.Inject
+                  @jakarta.inject.Inject
                   @uk.gov.justice.services.subscription.annotation.SubscriptionName("subscription")
                   uk.gov.justice.services.subscription.SubscriptionManager subscriptionManager;
                 
-                  @javax.inject.Inject
+                  @jakarta.inject.Inject
                   uk.gov.justice.services.adapter.messaging.SubscriptionJmsProcessor subscriptionJmsProcessor;
                 
                   @java.lang.Override
-                  public void onMessage(javax.jms.Message message) {
+                  public void onMessage(jakarta.jms.Message message) {
                     uk.gov.justice.services.messaging.logging.LoggerUtils.trace(LOGGER, () -> "Received JMS message");
                     subscriptionJmsProcessor.process(message, subscriptionManager);
                   }
@@ -213,31 +213,31 @@ public class MessageListenerCodeGeneratorTest {
 
         assertThat(typeSpec.toString(), is("""
                 @uk.gov.justice.services.core.annotation.Adapter("COMMAND_HANDLER")
-                @javax.ejb.MessageDriven(
+                @jakarta.ejb.MessageDriven(
                     activationConfig = {
-                        @javax.ejb.ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "my-context.handler.command"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "shareSubscriptions", propertyValue = "true"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "CPPNAME in('my-context.events.something-happened','my-context.events.something-else-happened')"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "maxSession", propertyValue = "${property.mdb.COMMAND_HANDLER.maxSession:15}")
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "destinationType", propertyValue = "jakarta.jms.Queue"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "my-context.handler.command"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "shareSubscriptions", propertyValue = "true"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "CPPNAME in('my-context.events.something-happened','my-context.events.something-else-happened')"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "maxSession", propertyValue = "${property.mdb.COMMAND_HANDLER.maxSession:15}")
                     }
                 )
-                @javax.interceptor.Interceptors({
+                @jakarta.interceptor.Interceptors({
                     uk.gov.moj.base.package.name.MyContextCommandHandlerMyContextHandlerCommandJmsLoggerMetadataInterceptor.class,
                     uk.gov.justice.services.adapter.messaging.JsonSchemaValidationInterceptor.class
                 })
-                public class MyContextCommandHandlerMyContextHandlerCommandJmsListener implements javax.jms.MessageListener {
+                public class MyContextCommandHandlerMyContextHandlerCommandJmsListener implements jakarta.jms.MessageListener {
                   private static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(uk.gov.moj.base.package.name.MyContextCommandHandlerMyContextHandlerCommandJmsListener.class);
                 
-                  @javax.inject.Inject
+                  @jakarta.inject.Inject
                   @uk.gov.justice.services.subscription.annotation.SubscriptionName("subscription")
                   uk.gov.justice.services.subscription.SubscriptionManager subscriptionManager;
                 
-                  @javax.inject.Inject
+                  @jakarta.inject.Inject
                   uk.gov.justice.services.adapter.messaging.SubscriptionJmsProcessor subscriptionJmsProcessor;
                 
                   @java.lang.Override
-                  public void onMessage(javax.jms.Message message) {
+                  public void onMessage(jakarta.jms.Message message) {
                     uk.gov.justice.services.messaging.logging.LoggerUtils.trace(LOGGER, () -> "Received JMS message");
                     subscriptionJmsProcessor.process(message, subscriptionManager);
                   }
@@ -300,31 +300,31 @@ public class MessageListenerCodeGeneratorTest {
 
         assertThat(typeSpec.toString(), is("""
                 @uk.gov.justice.services.core.annotation.Adapter("COMMAND_API")
-                @javax.ejb.MessageDriven(
+                @jakarta.ejb.MessageDriven(
                     activationConfig = {
-                        @javax.ejb.ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "my-context.handler.command"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "shareSubscriptions", propertyValue = "true"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "CPPNAME in('my-context.events.something-happened','my-context.events.something-else-happened')"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "maxSession", propertyValue = "${property.mdb.COMMAND_API.maxSession:15}")
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "destinationType", propertyValue = "jakarta.jms.Queue"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "my-context.handler.command"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "shareSubscriptions", propertyValue = "true"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "CPPNAME in('my-context.events.something-happened','my-context.events.something-else-happened')"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "maxSession", propertyValue = "${property.mdb.COMMAND_API.maxSession:15}")
                     }
                 )
-                @javax.interceptor.Interceptors({
+                @jakarta.interceptor.Interceptors({
                     uk.gov.moj.base.package.name.MyContextCommandApiMyContextHandlerCommandJmsLoggerMetadataInterceptor.class,
                     uk.gov.justice.services.adapter.messaging.JsonSchemaValidationInterceptor.class
                 })
-                public class MyContextCommandApiMyContextHandlerCommandJmsListener implements javax.jms.MessageListener {
+                public class MyContextCommandApiMyContextHandlerCommandJmsListener implements jakarta.jms.MessageListener {
                   private static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(uk.gov.moj.base.package.name.MyContextCommandApiMyContextHandlerCommandJmsListener.class);
                 
-                  @javax.inject.Inject
+                  @jakarta.inject.Inject
                   @uk.gov.justice.services.subscription.annotation.SubscriptionName("subscription")
                   uk.gov.justice.services.subscription.SubscriptionManager subscriptionManager;
                 
-                  @javax.inject.Inject
+                  @jakarta.inject.Inject
                   uk.gov.justice.services.adapter.messaging.SubscriptionJmsProcessor subscriptionJmsProcessor;
                 
                   @java.lang.Override
-                  public void onMessage(javax.jms.Message message) {
+                  public void onMessage(jakarta.jms.Message message) {
                     uk.gov.justice.services.messaging.logging.LoggerUtils.trace(LOGGER, () -> "Received JMS message");
                     subscriptionJmsProcessor.process(message, subscriptionManager);
                   }
@@ -339,31 +339,31 @@ public class MessageListenerCodeGeneratorTest {
 
         assertThat(typeSpec.toString(), is("""
                 @uk.gov.justice.services.core.annotation.Adapter("EVENT_PROCESSOR")
-                @javax.ejb.MessageDriven(
+                @jakarta.ejb.MessageDriven(
                     activationConfig = {
-                        @javax.ejb.ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "my-context.event"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "shareSubscriptions", propertyValue = "true"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "CPPNAME in('my-context.events.something-happened')"),
-                        @javax.ejb.ActivationConfigProperty(propertyName = "maxSession", propertyValue = "${property.mdb.EVENT_PROCESSOR.maxSession:15}")
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "destinationType", propertyValue = "jakarta.jms.Queue"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "my-context.event"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "shareSubscriptions", propertyValue = "true"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "messageSelector", propertyValue = "CPPNAME in('my-context.events.something-happened')"),
+                        @jakarta.ejb.ActivationConfigProperty(propertyName = "maxSession", propertyValue = "${property.mdb.EVENT_PROCESSOR.maxSession:15}")
                     }
                 )
-                @javax.interceptor.Interceptors({
+                @jakarta.interceptor.Interceptors({
                     uk.gov.moj.base.package.name.MyContextEventProcessorMyContextEventJmsLoggerMetadataInterceptor.class,
                     uk.gov.justice.services.adapter.messaging.JsonSchemaValidationInterceptor.class
                 })
-                public class MyContextEventProcessorMyContextEventJmsListener implements javax.jms.MessageListener {
+                public class MyContextEventProcessorMyContextEventJmsListener implements jakarta.jms.MessageListener {
                   private static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(uk.gov.moj.base.package.name.MyContextEventProcessorMyContextEventJmsListener.class);
                 
-                  @javax.inject.Inject
+                  @jakarta.inject.Inject
                   @uk.gov.justice.services.subscription.annotation.SubscriptionName("subscription")
                   uk.gov.justice.services.subscription.SubscriptionManager subscriptionManager;
                 
-                  @javax.inject.Inject
+                  @jakarta.inject.Inject
                   uk.gov.justice.services.adapter.messaging.SubscriptionJmsProcessor subscriptionJmsProcessor;
                 
                   @java.lang.Override
-                  public void onMessage(javax.jms.Message message) {
+                  public void onMessage(jakarta.jms.Message message) {
                     uk.gov.justice.services.messaging.logging.LoggerUtils.trace(LOGGER, () -> "Received JMS message");
                     subscriptionJmsProcessor.process(message, subscriptionManager);
                   }

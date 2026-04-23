@@ -19,8 +19,8 @@ import uk.gov.justice.services.core.extension.ServiceComponentFoundEvent;
 import uk.gov.justice.services.core.handler.registry.HandlerRegistryCache;
 import uk.gov.justice.services.core.interceptor.InterceptorChainProcessor;
 
-import javax.enterprise.inject.spi.InjectionPoint;
-import javax.inject.Inject;
+import jakarta.enterprise.inject.spi.InjectionPoint;
+import jakarta.inject.Inject;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -24,7 +24,7 @@ import uk.gov.justice.services.test.utils.common.MemberInjectionPoint;
 import uk.gov.justice.services.test.utils.common.envelope.EnvelopeRecordingInterceptor;
 import uk.gov.justice.services.test.utils.common.envelope.TestEnvelopeRecorder;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 import java.util.LinkedList;
 
 import static java.util.UUID.randomUUID;

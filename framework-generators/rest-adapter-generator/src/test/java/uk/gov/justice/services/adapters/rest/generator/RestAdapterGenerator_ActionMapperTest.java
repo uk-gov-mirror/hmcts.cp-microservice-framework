@@ -26,7 +26,7 @@ import uk.gov.justice.services.generators.commons.config.CommonGeneratorProperti
 
 import java.lang.reflect.Method;
 
-import javax.inject.Named;
+import jakarta.inject.Named;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;

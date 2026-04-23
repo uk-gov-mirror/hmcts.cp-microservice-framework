@@ -10,7 +10,7 @@ import uk.gov.justice.services.core.interceptor.InterceptorChainEntryProvider;
 
 import java.util.List;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class EntityManagerFlushInterceptorProvider implements InterceptorChainEntryProvider {
 

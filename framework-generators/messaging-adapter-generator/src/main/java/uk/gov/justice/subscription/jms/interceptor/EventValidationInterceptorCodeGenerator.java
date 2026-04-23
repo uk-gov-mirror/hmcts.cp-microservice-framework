@@ -10,8 +10,8 @@ import static uk.gov.justice.subscription.jms.core.ClassNameFactory.EVENT_VALIDA
 import uk.gov.justice.services.adapter.messaging.JsonSchemaValidationInterceptor;
 import uk.gov.justice.subscription.jms.core.ClassNameFactory;
 
-import javax.jms.JMSException;
-import javax.jms.TextMessage;
+import jakarta.jms.JMSException;
+import jakarta.jms.TextMessage;
 
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.MethodSpec;

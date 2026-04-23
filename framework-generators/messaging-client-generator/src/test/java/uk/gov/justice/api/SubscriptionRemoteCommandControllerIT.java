@@ -65,8 +65,8 @@ import java.util.Optional;
 import java.util.Properties;
 import java.util.UUID;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 import org.apache.openejb.OpenEjbContainer;
 import org.apache.openejb.jee.WebApp;

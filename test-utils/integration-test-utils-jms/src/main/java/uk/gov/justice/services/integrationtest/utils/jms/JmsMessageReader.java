@@ -5,10 +5,10 @@ import uk.gov.justice.services.integrationtest.utils.jms.converters.ToStringMess
 
 import java.util.Optional;
 
-import javax.jms.JMSException;
-import javax.jms.Message;
-import javax.jms.MessageConsumer;
-import javax.jms.TextMessage;
+import jakarta.jms.JMSException;
+import jakarta.jms.Message;
+import jakarta.jms.MessageConsumer;
+import jakarta.jms.TextMessage;
 
 
 class JmsMessageReader {

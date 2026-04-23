@@ -12,9 +12,9 @@ import uk.gov.justice.services.jmx.state.observers.SystemCommandStateBean;
 
 import java.util.UUID;
 
-import javax.annotation.Resource;
-import javax.enterprise.concurrent.ManagedExecutorService;
-import javax.inject.Inject;
+import jakarta.annotation.Resource;
+import jakarta.enterprise.concurrent.ManagedExecutorService;
+import jakarta.inject.Inject;
 
 public class AsynchronousCommandRunner {
 

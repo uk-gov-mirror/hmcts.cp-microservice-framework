@@ -7,7 +7,7 @@ import uk.gov.justice.services.adapter.rest.exception.BadRequestException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 import org.jboss.resteasy.plugins.providers.multipart.InputPart;
 

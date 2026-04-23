@@ -11,7 +11,7 @@ import uk.gov.justice.services.jmx.state.observers.SystemCommandStateBean;
 
 import java.util.UUID;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class JmxCommandRunner {
 

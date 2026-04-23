@@ -1,6 +1,6 @@
 package uk.gov.justice.services.adapter.rest.parameter;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

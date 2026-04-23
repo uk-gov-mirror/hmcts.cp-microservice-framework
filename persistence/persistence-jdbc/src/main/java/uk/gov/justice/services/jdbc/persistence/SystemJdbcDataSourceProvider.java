@@ -2,7 +2,7 @@ package uk.gov.justice.services.jdbc.persistence;
 
 import static java.lang.String.format;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
