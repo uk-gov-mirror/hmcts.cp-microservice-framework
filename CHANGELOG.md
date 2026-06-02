@@ -3,38 +3,22 @@ All notable changes to this project will be documented in this file, which follo
 on [Keep a CHANGELOG](http://keepachangelog.com/). This project adheres to
 [Semantic Versioning](http://semver.org/).
 
-[Unreleased]
+## [Unreleased]
 
-## [21.0.0-SNAPSHOT] - 2026-04-20
-### Fixed
-- Fixed `IllegalStateException: You cannot use setBrokerURL after the connection factory has been used` in `JmsSessionFactory` when running against Artemis 2.32 (shipped with WildFly 32): removed the `activeMQConnectionFactory.setBrokerURL(queueUri)` call — the no-arg `ActiveMQConnectionFactory()` constructor now initialises the broker URL to `tcp://localhost:61616` immediately, making a subsequent `setBrokerURL` call illegal
+## [21.0.0-M1] - 2026-06-02
 ### Changed
-- Migrated `javax.jms.*` imports to `jakarta.jms.*` in `JmsSessionFactory`
-## [21.0.0-SNAPSHOT] - 2026-03-27
-### Changed
-- Updated `byte-buddy` from `1.12.22` to `1.14.4` in `cp-maven-common-bom` to support Java 21 class file version (65) required by Mockito inline mock maker
-- Updated `johnzon.version` from `1.2.9` to `2.0.1` in `cp-maven-common-bom` to align with Jakarta EE 10 (`javax.json.*` → `jakarta.json.*`), resolving `ClassNotFoundException: javax.json.spi.JsonProvider` in OpenEJB embedded integration tests
-- Added managed dependency `jakarta.activation:jakarta.activation-api:2.1.2` to `cp-maven-common-bom` to resolve `DependencyConvergence` enforcer failure caused by version conflict between `jakarta.jakartaee-api` (`2.1.0`) and `resteasy-core` (`2.1.2`)
-- Replaced `org.glassfish:javax.json` with `org.glassfish:jakarta.json` in test/compile dependencies across: `messaging-core`, `generators-commons`, `test-utils-core`, `test-utils-common`, `rest-adapter-core`, `event-subscription`, `core`, `common-rest`, `rest-adapter-generator`, `direct-client-generator`, `messaging-client-generator`
-- Replaced `artemis-jms-client` with `artemis-jakarta-client` in `integration-test-utils-jms` to resolve compilation errors caused by `javax.jms.*` references in the legacy Artemis client artifact
+- Upgraded to Java 21 and Jakarta EE 10 (17.104.x release line)
+- Migrated all Java source files from `javax.*` to `jakarta.*` namespaces across CDI, EJB, JMS, JAX-RS, persistence, validation, transactions, JSON-P, and JAXB APIs
+- Replaced `org.glassfish:javax.json` with `org.glassfish:jakarta.json` in test/compile dependencies across `messaging-core`, `generators-commons`, `test-utils-core`, `test-utils-common`, `rest-adapter-core`, `event-subscription`, `core`, `common-rest`, `rest-adapter-generator`, `direct-client-generator`, `messaging-client-generator`
+- Replaced `artemis-jms-client` with `artemis-jakarta-client` in `integration-test-utils-jms`
+
 ### Fixed
-- Fixed `ServiceConfigurationError: jakarta.json.spi.JsonProvider: org.glassfish.json.JsonProviderImpl not a subtype` across multiple modules — caused by `org.glassfish:javax.json:1.1.4` (old `javax.*` namespace) coexisting on the classpath alongside `parsson`, which implements `jakarta.json.spi.JsonProvider`
+- Fixed `IllegalStateException: You cannot use setBrokerURL after the connection factory has been used` in `JmsSessionFactory` when running against Artemis 2.32 (WildFly 32): removed the `activeMQConnectionFactory.setBrokerURL(queueUri)` call — the no-arg constructor now initialises the broker URL immediately, making a subsequent `setBrokerURL` illegal
+- Fixed `ServiceConfigurationError: jakarta.json.spi.JsonProvider: org.glassfish.json.JsonProviderImpl not a subtype` across multiple modules — caused by `org.glassfish:javax.json` (old `javax.*` namespace) coexisting on the classpath alongside `parsson`
 - Fixed `AssertionError` in `JsonEnvelopeWriterTest`: `writeJsonObject()` now prepends a newline to its output to match the expected format
-- Fixed `NoSuchElementException` and `NullPointerException` in `BasicActionMapperHelperTest` and `RestAdapterGenerator_ActionMapperTest` by correcting `HeadersBuilder.getAcceptableMediaTypes()` to parse the `Accept` header and `getMediaType()` to parse the `Content-Type` header (both previously returned empty/null regardless of input)
-- Fixed expected strings in `messaging-adapter-generator` IT tests: updated `@javax.interceptor.Interceptors` → `@jakarta.interceptor.Interceptors` to match the Jakarta EE 10 code generator output
-
-## [21.0.0-SNAPSHOT] - 2026-03-26
-### Changed
-- Upgraded to Java 21 and Jakarta EE 10
-- Migrated 453 Java source files from `javax.*` to `jakarta.*` namespaces across CDI, EJB, JMS, JAX-RS, persistence, validation, transactions, JSON-P, and JAXB APIs
-- Replaced `javax.ws.rs.*` with `jakarta.ws.rs.*` in REST adapter and client components
-- Replaced `javax.inject.*` with `jakarta.inject.*` across all CDI injection points
-- Replaced `javax.jms.*` with `jakarta.jms.*` in JMS messaging components
-- Replaced `javax.json.*` with `jakarta.json.*` in JSON-P processing components
-### Fixed
-- Corrected Jakarta EE namespace migration in `unifiedsearch-client-generator`: replaced `javax:javaee-api` dependency with `jakarta.platform:jakarta.jakartaee-api:10.0.0` in both compile and plugin classpath scopes
-- Fixed `ServiceConfigurationError: Provider javax.json.spi.JsonProvider not found` in `unifiedsearch-client-generator-plugin` by excluding `org.glassfish:javax.json` and adding Jakarta JSON-P runtime stack (`parsson:1.1.0`, `org.glassfish:jakarta.json:2.0.1`, `jackson-datatype-jakarta-jsonp:2.14.2`) to the plugin classpath
-- Fixed compilation of `metrics-servlet` against `io.dropwizard.metrics:metrics-servlets:3.1.2`: replaced `javax:javaee-api` with `jakarta.platform:jakarta.jakartaee-api` and added `javax.servlet-api:4.0.1` as a provided dependency
+- Fixed `NoSuchElementException` and `NullPointerException` in `BasicActionMapperHelperTest` and `RestAdapterGenerator_ActionMapperTest` — `HeadersBuilder` now correctly parses the `Accept` and `Content-Type` headers
+- Fixed expected strings in `messaging-adapter-generator` IT tests: updated `@javax.interceptor.Interceptors` → `@jakarta.interceptor.Interceptors`
+- Fixed Jakarta EE namespace migration in `unifiedsearch-client-generator` and `metrics-servlet`
 # [17.104.0] - 2025-12-16
 ### Added
 - New module `framework-libraries-version` that contains a maven generated json file that has this project's version number
