@@ -14,7 +14,7 @@ import uk.gov.justice.services.core.annotation.ServiceComponent;
 import java.lang.reflect.Field;
 import java.util.Optional;
 
-import javax.enterprise.inject.spi.InjectionPoint;
+import jakarta.enterprise.inject.spi.InjectionPoint;
 
 public class ComponentNameExtractor {
 

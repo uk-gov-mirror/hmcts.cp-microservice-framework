@@ -8,8 +8,8 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 import java.util.Map;
 import java.util.UUID;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.json.JsonObjectBuilder;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.json.JsonObjectBuilder;
 
 @ApplicationScoped
 public class ResultsHandler {

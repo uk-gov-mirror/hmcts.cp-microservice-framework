@@ -10,10 +10,10 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 
 import java.util.Optional;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
-import javax.ws.rs.core.Response;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+import jakarta.ws.rs.core.Response;
 
 import org.apache.openejb.jee.Application;
 import org.apache.openejb.jee.WebApp;

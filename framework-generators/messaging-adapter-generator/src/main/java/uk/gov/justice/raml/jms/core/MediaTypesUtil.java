@@ -1,7 +1,7 @@
 package uk.gov.justice.raml.jms.core;
 
 
-import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
+import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 import static org.raml.model.ActionType.POST;
 
 import java.util.Map;

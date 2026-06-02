@@ -4,7 +4,7 @@ import uk.gov.justice.services.core.handler.HandlerMethod;
 import uk.gov.justice.services.messaging.Envelope;
 import uk.gov.justice.services.messaging.JsonEnvelope;
 
-import javax.json.JsonValue;
+import jakarta.json.JsonValue;
 
 /**
  *

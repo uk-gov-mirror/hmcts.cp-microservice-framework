@@ -22,7 +22,7 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 import javax.lang.model.element.Modifier;
 
 import com.google.common.collect.ImmutableList;

@@ -8,7 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
-import javax.inject.Singleton;
+import jakarta.inject.Singleton;
 
 @Singleton
 public class RecordingInterceptorChainProcessor extends EnvelopeRecorder implements InterceptorChainProcessor {

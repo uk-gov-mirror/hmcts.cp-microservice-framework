@@ -5,8 +5,8 @@ import static uk.gov.justice.services.messaging.JsonEnvelopeWriter.writeJsonObje
 import uk.gov.justice.services.common.converter.ObjectToJsonObjectConverter;
 import uk.gov.justice.services.healthcheck.run.HealthcheckRunResults;
 
-import javax.inject.Inject;
-import javax.json.JsonObject;
+import jakarta.inject.Inject;
+import jakarta.json.JsonObject;
 
 public class HealthcheckToJsonConverter {
 

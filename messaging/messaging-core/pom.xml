@@ -5,7 +5,7 @@
     <parent>
         <artifactId>messaging</artifactId>
         <groupId>uk.gov.justice.services</groupId>
-        <version>17.104.1-SNAPSHOT</version>
+        <version>21.0.0-M1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,8 +13,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -30,8 +30,8 @@
             <artifactId>utilities-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>javax.json</groupId>
-            <artifactId>javax.json-api</artifactId>
+            <groupId>jakarta.json</groupId>
+            <artifactId>jakarta.json-api</artifactId>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>
@@ -67,7 +67,12 @@
         </dependency>
         <dependency>
             <groupId>org.glassfish</groupId>
-            <artifactId>javax.json</artifactId>
+            <artifactId>jakarta.json</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.parsson</groupId>
+            <artifactId>parsson</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -88,16 +93,6 @@
         <dependency>
             <groupId>co.unruly</groupId>
             <artifactId>java-8-matchers</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomee</groupId>
-            <artifactId>openejb-core</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomee</groupId>
-            <artifactId>openejb-server</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>

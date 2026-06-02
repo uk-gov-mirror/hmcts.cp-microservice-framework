@@ -1,7 +1,7 @@
 package uk.gov.justice.services.persistence;
 
-import static javax.transaction.Status.STATUS_ACTIVE;
-import static javax.transaction.Status.STATUS_MARKED_ROLLBACK;
+import static jakarta.transaction.Status.STATUS_ACTIVE;
+import static jakarta.transaction.Status.STATUS_MARKED_ROLLBACK;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.sameInstance;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -15,9 +15,9 @@ import static org.mockito.Mockito.when;
 import uk.gov.justice.services.core.interceptor.InterceptorChain;
 import uk.gov.justice.services.core.interceptor.InterceptorContext;
 
-import javax.persistence.EntityManager;
-import javax.transaction.SystemException;
-import javax.transaction.UserTransaction;
+import jakarta.persistence.EntityManager;
+import jakarta.transaction.SystemException;
+import jakarta.transaction.UserTransaction;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

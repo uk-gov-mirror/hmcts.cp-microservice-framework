@@ -2,17 +2,17 @@ package uk.gov.justice.services.messaging.jms;
 
 import static java.lang.String.format;
 import static java.util.Collections.list;
-import static javax.jms.Session.AUTO_ACKNOWLEDGE;
+import static jakarta.jms.Session.AUTO_ACKNOWLEDGE;
 
-import javax.annotation.Resource;
-import javax.inject.Inject;
-import javax.jms.Connection;
-import javax.jms.ConnectionFactory;
-import javax.jms.Destination;
-import javax.jms.JMSException;
-import javax.jms.Queue;
-import javax.jms.QueueBrowser;
-import javax.jms.Session;
+import jakarta.annotation.Resource;
+import jakarta.inject.Inject;
+import jakarta.jms.Connection;
+import jakarta.jms.ConnectionFactory;
+import jakarta.jms.Destination;
+import jakarta.jms.JMSException;
+import jakarta.jms.Queue;
+import jakarta.jms.QueueBrowser;
+import jakarta.jms.Session;
 
 public class JmsQueueBrowser {
 

@@ -3,7 +3,7 @@ package uk.gov.justice.services.test.utils.core.converter;
 import org.junit.jupiter.api.Test;
 import uk.gov.justice.services.common.converter.JsonObjectToObjectConverter;
 
-import javax.json.JsonObject;
+import jakarta.json.JsonObject;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;

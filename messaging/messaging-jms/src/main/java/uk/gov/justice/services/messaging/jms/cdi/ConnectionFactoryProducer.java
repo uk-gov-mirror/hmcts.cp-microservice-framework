@@ -3,13 +3,13 @@ package uk.gov.justice.services.messaging.jms.cdi;
 import uk.gov.justice.services.cdi.QualifierAnnotationExtractor;
 import uk.gov.justice.services.messaging.jms.annotation.ConnectionFactoryName;
 
-import javax.annotation.Priority;
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Default;
-import javax.enterprise.inject.Produces;
-import javax.enterprise.inject.spi.InjectionPoint;
-import javax.inject.Inject;
-import javax.jms.ConnectionFactory;
+import jakarta.annotation.Priority;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Default;
+import jakarta.enterprise.inject.Produces;
+import jakarta.enterprise.inject.spi.InjectionPoint;
+import jakarta.inject.Inject;
+import jakarta.jms.ConnectionFactory;
 
 @ApplicationScoped
 @Default

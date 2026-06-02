@@ -60,12 +60,12 @@ import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
 
-import javax.ejb.ActivationConfigProperty;
-import javax.ejb.MessageDriven;
-import javax.inject.Inject;
-import javax.interceptor.Interceptors;
-import javax.jms.Message;
-import javax.jms.MessageListener;
+import jakarta.ejb.ActivationConfigProperty;
+import jakarta.ejb.MessageDriven;
+import jakarta.inject.Inject;
+import jakarta.interceptor.Interceptors;
+import jakarta.jms.Message;
+import jakarta.jms.MessageListener;
 
 import org.hamcrest.CoreMatchers;
 import org.hamcrest.FeatureMatcher;
@@ -573,7 +573,7 @@ public class SubscriptionJmsEndpointGeneratorTest {
         assertThat(clazz.getAnnotation(MessageDriven.class), is(notNullValue()));
         assertThat(clazz.getAnnotation(MessageDriven.class).activationConfig(),
                 hasItemInArray(allOf(propertyName(equalTo("destinationType")),
-                        propertyValue(equalTo("javax.jms.Queue")))));
+                        propertyValue(equalTo("jakarta.jms.Queue")))));
     }
 
     @Test
@@ -593,7 +593,7 @@ public class SubscriptionJmsEndpointGeneratorTest {
         assertThat(clazz.getAnnotation(MessageDriven.class), is(notNullValue()));
         assertThat(clazz.getAnnotation(MessageDriven.class).activationConfig(),
                 hasItemInArray(allOf(propertyName(equalTo("destinationType")),
-                        propertyValue(equalTo("javax.jms.Queue")))));
+                        propertyValue(equalTo("jakarta.jms.Queue")))));
     }
 
     @Test
@@ -612,7 +612,7 @@ public class SubscriptionJmsEndpointGeneratorTest {
         assertThat(clazz.getAnnotation(MessageDriven.class), is(notNullValue()));
         assertThat(clazz.getAnnotation(MessageDriven.class).activationConfig(),
                 hasItemInArray(allOf(propertyName(equalTo("destinationType")),
-                        propertyValue(equalTo("javax.jms.Topic")))));
+                        propertyValue(equalTo("jakarta.jms.Topic")))));
     }
 
     @Test
@@ -834,7 +834,7 @@ public class SubscriptionJmsEndpointGeneratorTest {
         final ActivationConfigProperty[] activationConfig = clazz.getAnnotation(MessageDriven.class).activationConfig();
 
         assertThat(activationConfig, hasItemInArray(
-                allOf(propertyName(equalTo("destinationType")), propertyValue(equalTo("javax.jms.Topic")))));
+                allOf(propertyName(equalTo("destinationType")), propertyValue(equalTo("jakarta.jms.Topic")))));
         assertThat(activationConfig, hasItemInArray(
                 allOf(propertyName(equalTo("subscriptionDurability")), propertyValue(equalTo("Durable")))));
         assertThat(activationConfig, hasItemInArray(
@@ -859,7 +859,7 @@ public class SubscriptionJmsEndpointGeneratorTest {
 
         assertThat(activationConfig, hasItemInArray(allOf(
                 propertyName(equalTo("destinationType")),
-                propertyValue(equalTo("javax.jms.Queue")))));
+                propertyValue(equalTo("jakarta.jms.Queue")))));
         assertThat(activationConfig, not(hasItemInArray(allOf(
                 propertyName(equalTo("clientId")),
                 propertyName(equalTo("subscriptionName")),

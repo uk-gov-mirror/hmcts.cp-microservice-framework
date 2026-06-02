@@ -9,9 +9,9 @@ import uk.gov.justice.raml.jms.core.ClassNameFactory;
 import uk.gov.justice.services.adapter.messaging.JmsLoggerMetadataAdder;
 import uk.gov.justice.services.generators.commons.config.CommonGeneratorProperties;
 
-import javax.inject.Inject;
-import javax.interceptor.AroundInvoke;
-import javax.interceptor.InvocationContext;
+import jakarta.inject.Inject;
+import jakarta.interceptor.AroundInvoke;
+import jakarta.interceptor.InvocationContext;
 
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.CodeBlock;

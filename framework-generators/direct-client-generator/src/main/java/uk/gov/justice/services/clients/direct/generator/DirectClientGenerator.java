@@ -23,7 +23,7 @@ import uk.gov.justice.services.generators.commons.validator.ResponseContentTypeR
 import uk.gov.justice.services.generators.commons.validator.SupportedActionTypesRamlValidator;
 import uk.gov.justice.services.messaging.JsonEnvelope;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.CodeBlock;

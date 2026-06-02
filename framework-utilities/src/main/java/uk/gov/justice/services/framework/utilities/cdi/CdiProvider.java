@@ -1,6 +1,6 @@
 package uk.gov.justice.services.framework.utilities.cdi;
 
-import javax.enterprise.inject.spi.CDI;
+import jakarta.enterprise.inject.spi.CDI;
 
 public class CdiProvider {
 

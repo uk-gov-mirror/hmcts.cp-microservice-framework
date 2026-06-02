@@ -8,7 +8,7 @@ import uk.gov.justice.services.shuttering.persistence.StoredCommandRepository;
 
 import java.util.UUID;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class ShutteringStoreSender implements EnvelopeSender {
 

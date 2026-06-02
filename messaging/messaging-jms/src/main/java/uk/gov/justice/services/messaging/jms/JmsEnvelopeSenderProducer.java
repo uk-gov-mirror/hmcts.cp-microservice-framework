@@ -4,11 +4,11 @@ import static uk.gov.justice.services.core.annotation.Component.COMMAND_CONTROLL
 
 import uk.gov.justice.services.common.annotation.ComponentNameExtractor;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Default;
-import javax.enterprise.inject.Produces;
-import javax.enterprise.inject.spi.InjectionPoint;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Default;
+import jakarta.enterprise.inject.Produces;
+import jakarta.enterprise.inject.spi.InjectionPoint;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 @Default

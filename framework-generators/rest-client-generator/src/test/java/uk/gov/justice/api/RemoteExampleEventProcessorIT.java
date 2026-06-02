@@ -79,7 +79,7 @@ import uk.gov.justice.services.test.utils.common.validator.DummyJsonSchemaValida
 import uk.gov.justice.services.test.utils.core.handler.registry.TestHandlerRegistryCacheProducer;
 import uk.gov.justice.subscription.domain.eventsource.DefaultEventSourceDefinitionFactory;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 import java.util.Properties;
 import java.util.UUID;
 
@@ -100,8 +100,8 @@ import static com.github.tomakehurst.wiremock.client.WireMock.verify;
 import static com.jayway.jsonpath.matchers.JsonPathMatchers.withJsonPath;
 import static java.lang.String.format;
 import static java.util.UUID.randomUUID;
-import static javax.ws.rs.core.HttpHeaders.CONTENT_TYPE;
-import static javax.ws.rs.core.Response.Status.ACCEPTED;
+import static jakarta.ws.rs.core.HttpHeaders.CONTENT_TYPE;
+import static jakarta.ws.rs.core.Response.Status.ACCEPTED;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;

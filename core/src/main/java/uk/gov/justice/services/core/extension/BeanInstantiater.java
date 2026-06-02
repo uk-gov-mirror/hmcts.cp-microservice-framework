@@ -1,8 +1,8 @@
 package uk.gov.justice.services.core.extension;
 
-import javax.enterprise.inject.spi.Bean;
-import javax.enterprise.inject.spi.BeanManager;
-import javax.inject.Inject;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.BeanManager;
+import jakarta.inject.Inject;
 
 /**
  * Injectable class to provide bean instantiation support.  Will instantiate a given bean using an

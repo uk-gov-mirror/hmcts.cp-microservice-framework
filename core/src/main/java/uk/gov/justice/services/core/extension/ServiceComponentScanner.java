@@ -20,13 +20,13 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Stream;
 
-import javax.enterprise.event.Observes;
-import javax.enterprise.inject.spi.AfterDeploymentValidation;
-import javax.enterprise.inject.spi.AnnotatedType;
-import javax.enterprise.inject.spi.Bean;
-import javax.enterprise.inject.spi.BeanManager;
-import javax.enterprise.inject.spi.Extension;
-import javax.enterprise.inject.spi.ProcessAnnotatedType;
+import jakarta.enterprise.event.Observes;
+import jakarta.enterprise.inject.spi.AfterDeploymentValidation;
+import jakarta.enterprise.inject.spi.AnnotatedType;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.BeanManager;
+import jakarta.enterprise.inject.spi.Extension;
+import jakarta.enterprise.inject.spi.ProcessAnnotatedType;
 
 import org.slf4j.Logger;
 
@@ -104,6 +104,6 @@ public class ServiceComponentScanner implements Extension {
     }
 
     private void fireAllCollectedEvents(final BeanManager beanManager) {
-        events.forEach(beanManager::fireEvent);
+        events.forEach(e -> beanManager.getEvent().fire(e));
     }
 }

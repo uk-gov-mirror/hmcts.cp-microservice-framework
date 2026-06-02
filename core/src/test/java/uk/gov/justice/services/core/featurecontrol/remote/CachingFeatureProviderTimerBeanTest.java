@@ -9,7 +9,7 @@ import static org.mockito.Mockito.when;
 import uk.gov.justice.services.core.featurecontrol.domain.Feature;
 import uk.gov.justice.services.ejb.timer.TimerServiceManager;
 
-import javax.ejb.TimerService;
+import jakarta.ejb.TimerService;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

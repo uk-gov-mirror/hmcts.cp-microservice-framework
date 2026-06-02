@@ -6,7 +6,7 @@ import uk.gov.justice.services.core.annotation.DirectAdapter;
 import uk.gov.justice.services.core.interceptor.InterceptorChainProcessor;
 import uk.gov.justice.services.messaging.JsonEnvelope;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 @DirectAdapter(QUERY_VIEW)
 public class QueryViewDirectAdapter implements SynchronousDirectAdapter {

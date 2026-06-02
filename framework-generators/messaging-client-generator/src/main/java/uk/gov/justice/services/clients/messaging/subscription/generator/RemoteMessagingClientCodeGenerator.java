@@ -12,7 +12,7 @@ import uk.gov.justice.services.messaging.logging.TraceLogger;
 import uk.gov.justice.subscription.domain.eventsource.EventSourceDefinition;
 import uk.gov.justice.subscription.domain.subscriptiondescriptor.Subscription;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.ClassName;

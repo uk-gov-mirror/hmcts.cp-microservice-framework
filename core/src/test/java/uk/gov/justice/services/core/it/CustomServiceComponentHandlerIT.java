@@ -71,8 +71,8 @@ import uk.gov.justice.services.test.utils.common.envelope.TestEnvelopeRecorder;
 import uk.gov.justice.services.test.utils.common.validator.DummyJsonSchemaValidator;
 import uk.gov.justice.services.test.utils.messaging.jms.DummyJmsEnvelopeSender;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

@@ -4,10 +4,10 @@ import uk.gov.justice.services.clients.core.EndpointDefinition;
 import uk.gov.justice.services.clients.core.QueryParam;
 import uk.gov.justice.services.messaging.JsonEnvelope;
 
-import javax.json.JsonObject;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
+import jakarta.json.JsonObject;
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.WebTarget;
 
 import static java.lang.String.format;
 

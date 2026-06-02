@@ -12,8 +12,8 @@ import uk.gov.justice.services.management.suspension.commands.SuspensionCommand;
 import java.util.List;
 import java.util.UUID;
 
-import javax.enterprise.event.Event;
-import javax.inject.Inject;
+import jakarta.enterprise.event.Event;
+import jakarta.inject.Inject;
 
 import org.slf4j.Logger;
 

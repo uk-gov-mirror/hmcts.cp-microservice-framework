@@ -5,7 +5,7 @@ import static uk.gov.justice.services.test.utils.core.messaging.MetadataBuilderF
 
 import uk.gov.justice.services.messaging.JsonEnvelope;
 
-import javax.json.JsonObject;
+import jakarta.json.JsonObject;
 
 /**
  * Class for creating a simple JsonEnvelope. Uses a random UUID in the metadata

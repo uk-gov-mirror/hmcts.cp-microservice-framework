@@ -2,7 +2,7 @@ package uk.gov.justice.services.test.utils.core.matchers;
 
 import org.junit.jupiter.api.Test;
 
-import javax.json.JsonValue;
+import jakarta.json.JsonValue;
 import java.util.UUID;
 
 import static com.jayway.jsonpath.matchers.JsonPathMatchers.withJsonPath;

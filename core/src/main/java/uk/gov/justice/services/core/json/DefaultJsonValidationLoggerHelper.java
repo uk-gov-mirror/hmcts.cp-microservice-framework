@@ -3,9 +3,9 @@ package uk.gov.justice.services.core.json;
 import org.everit.json.schema.Schema;
 import org.everit.json.schema.ValidationException;
 
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonObject;
-import javax.json.JsonObjectBuilder;
+import jakarta.json.JsonArrayBuilder;
+import jakarta.json.JsonObject;
+import jakarta.json.JsonObjectBuilder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

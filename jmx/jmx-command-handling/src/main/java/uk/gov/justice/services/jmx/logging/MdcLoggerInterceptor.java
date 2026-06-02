@@ -3,9 +3,9 @@ package uk.gov.justice.services.jmx.logging;
 import org.slf4j.MDC;
 import uk.gov.justice.services.common.configuration.ServiceContextNameProvider;
 
-import javax.inject.Inject;
-import javax.interceptor.AroundInvoke;
-import javax.interceptor.InvocationContext;
+import jakarta.inject.Inject;
+import jakarta.interceptor.AroundInvoke;
+import jakarta.interceptor.InvocationContext;
 
 import static java.util.Optional.ofNullable;
 import static uk.gov.justice.services.common.log.LoggerConstants.REQUEST_DATA;

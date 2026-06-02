@@ -1,6 +1,6 @@
 package uk.gov.justice.services.adapters.rest.generator;
 
-import static javax.ws.rs.core.MediaType.APPLICATION_OCTET_STREAM;
+import static jakarta.ws.rs.core.MediaType.APPLICATION_OCTET_STREAM;
 import static uk.gov.justice.services.adapter.rest.processor.response.ResponseStrategies.ACCEPTED_STATUS_ENVELOPE_ENTITY_RESPONSE_STRATEGY;
 import static uk.gov.justice.services.adapter.rest.processor.response.ResponseStrategies.ACCEPTED_STATUS_NO_ENTITY_RESPONSE_STRATEGY;
 import static uk.gov.justice.services.adapter.rest.processor.response.ResponseStrategies.FILE_STREAM_RETURNING_RESPONSE_STRATEGY;

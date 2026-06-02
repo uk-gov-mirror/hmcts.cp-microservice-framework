@@ -7,7 +7,7 @@ import uk.gov.justice.schema.catalog.SchemaCatalogResolver;
 
 import java.io.InputStream;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.everit.json.schema.Schema;
 import org.json.JSONObject;

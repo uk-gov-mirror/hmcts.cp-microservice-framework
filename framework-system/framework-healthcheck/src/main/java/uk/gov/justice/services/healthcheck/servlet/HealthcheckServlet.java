@@ -1,7 +1,7 @@
 package uk.gov.justice.services.healthcheck.servlet;
 
 import static java.lang.String.format;
-import static javax.servlet.http.HttpServletResponse.SC_OK;
+import static jakarta.servlet.http.HttpServletResponse.SC_OK;
 
 import uk.gov.justice.services.healthcheck.run.HealthcheckProcessRunner;
 import uk.gov.justice.services.healthcheck.run.HealthcheckRunResults;
@@ -9,11 +9,11 @@ import uk.gov.justice.services.healthcheck.run.HealthcheckRunResults;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.inject.Inject;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.inject.Inject;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 

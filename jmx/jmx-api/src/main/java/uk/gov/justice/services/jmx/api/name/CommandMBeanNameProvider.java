@@ -2,7 +2,7 @@ package uk.gov.justice.services.jmx.api.name;
 
 import static java.lang.String.format;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 import javax.management.ObjectName;
 
 public class CommandMBeanNameProvider {

@@ -5,7 +5,7 @@ import uk.gov.justice.services.test.utils.core.messaging.TopicFactory;
 import org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory;
 import org.junit.jupiter.api.extension.ExtensionContext.Store.CloseableResource;
 
-class JmsResourcesContextProvider implements CloseableResource {
+class JmsResourcesContextProvider implements CloseableResource, AutoCloseable {
 
     private static JmsResourcesContext jmsResourcesContext;
 

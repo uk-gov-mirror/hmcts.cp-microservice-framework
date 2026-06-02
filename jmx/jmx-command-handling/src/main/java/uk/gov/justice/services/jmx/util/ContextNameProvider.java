@@ -2,7 +2,7 @@ package uk.gov.justice.services.jmx.util;
 
 import uk.gov.justice.services.common.configuration.ServiceContextNameProvider;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class ContextNameProvider {
 

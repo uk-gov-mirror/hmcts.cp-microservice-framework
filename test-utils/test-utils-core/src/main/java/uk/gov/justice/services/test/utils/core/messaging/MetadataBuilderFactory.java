@@ -10,7 +10,7 @@ import uk.gov.justice.services.messaging.MetadataBuilder;
 
 import java.util.UUID;
 
-import javax.json.JsonObject;
+import jakarta.json.JsonObject;
 
 public final class MetadataBuilderFactory {
 

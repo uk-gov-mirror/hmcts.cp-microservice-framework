@@ -1,7 +1,7 @@
 package uk.gov.justice.services.management.suspension.handler;
 
 import static java.lang.String.format;
-import static javax.transaction.Transactional.TxType.REQUIRED;
+import static jakarta.transaction.Transactional.TxType.REQUIRED;
 import static uk.gov.justice.services.jmx.api.domain.CommandState.COMMAND_IN_PROGRESS;
 
 import uk.gov.justice.services.common.util.UtcClock;
@@ -16,11 +16,11 @@ import uk.gov.justice.services.management.suspension.process.SuspensionResultsMa
 import java.util.List;
 import java.util.UUID;
 
-import javax.ejb.Stateless;
-import javax.enterprise.event.Event;
-import javax.inject.Inject;
-import javax.interceptor.Interceptors;
-import javax.transaction.Transactional;
+import jakarta.ejb.Stateless;
+import jakarta.enterprise.event.Event;
+import jakarta.inject.Inject;
+import jakarta.interceptor.Interceptors;
+import jakarta.transaction.Transactional;
 
 import org.slf4j.Logger;
 

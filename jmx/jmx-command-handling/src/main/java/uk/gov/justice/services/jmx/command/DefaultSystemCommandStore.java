@@ -9,10 +9,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Priority;
-import javax.enterprise.inject.Alternative;
-import javax.inject.Inject;
-import javax.inject.Singleton;
+import jakarta.annotation.Priority;
+import jakarta.enterprise.inject.Alternative;
+import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
 
 import org.slf4j.Logger;
 

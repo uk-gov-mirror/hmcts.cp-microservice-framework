@@ -10,9 +10,9 @@ import uk.gov.justice.services.generators.subscription.parser.SubscriptionWrappe
 import uk.gov.justice.subscription.domain.subscriptiondescriptor.SubscriptionsDescriptor;
 import uk.gov.justice.subscription.jms.core.ClassNameFactory;
 
-import javax.inject.Inject;
-import javax.interceptor.AroundInvoke;
-import javax.interceptor.InvocationContext;
+import jakarta.inject.Inject;
+import jakarta.interceptor.AroundInvoke;
+import jakarta.interceptor.InvocationContext;
 
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.CodeBlock;

@@ -7,9 +7,9 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 import uk.gov.justice.services.unifiedsearch.TransformerApi;
 import uk.gov.justice.services.unifiedsearch.UnifiedSearchIndexer;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.json.JsonObject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.json.JsonObject;
 
 @ApplicationScoped
 public class UnifiedSearchAdapter {

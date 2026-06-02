@@ -1,6 +1,6 @@
 package uk.gov.justice.services.adapters.rest.generator;
 
-import static javax.ws.rs.core.MediaType.MULTIPART_FORM_DATA;
+import static jakarta.ws.rs.core.MediaType.MULTIPART_FORM_DATA;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.nullValue;
@@ -26,11 +26,11 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.Response;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.Response;
 
 import org.jboss.resteasy.annotations.providers.multipart.MultipartForm;
 import org.jboss.resteasy.plugins.providers.multipart.MultipartFormDataInput;
@@ -63,7 +63,7 @@ public class RestAdapterGenerator_MultipartCodeStructureTest extends BaseRestAda
         assertThat(methods, hasSize(1));
         final Method method = methods.get(0);
         assertThat(method.getReturnType(), equalTo(Response.class));
-        assertThat(method.getAnnotation(javax.ws.rs.POST.class), not(nullValue()));
+        assertThat(method.getAnnotation(jakarta.ws.rs.POST.class), not(nullValue()));
         assertThat(method.getAnnotation(Consumes.class), not(nullValue()));
         assertThat(method.getAnnotation(Consumes.class).value(),
                 is(new String[]{MULTIPART_FORM_DATA}));

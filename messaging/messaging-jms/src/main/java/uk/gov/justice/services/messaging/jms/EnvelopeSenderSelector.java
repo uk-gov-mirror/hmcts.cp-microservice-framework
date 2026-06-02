@@ -2,8 +2,8 @@ package uk.gov.justice.services.messaging.jms;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class EnvelopeSenderSelector {

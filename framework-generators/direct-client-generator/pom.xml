@@ -5,7 +5,7 @@
     <parent>
         <artifactId>framework-generators</artifactId>
         <groupId>uk.gov.justice.framework-generators</groupId>
-        <version>17.104.1-SNAPSHOT</version>
+        <version>21.0.0-M1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,8 +13,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -58,7 +58,12 @@
         </dependency>
         <dependency>
             <groupId>org.glassfish</groupId>
-            <artifactId>javax.json</artifactId>
+            <artifactId>jakarta.json</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.parsson</groupId>
+            <artifactId>parsson</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -145,9 +150,9 @@
                         <version>${project.version}</version>
                     </dependency>
                     <dependency>
-                        <groupId>javax</groupId>
-                        <artifactId>javaee-api</artifactId>
-                        <version>${javaee-api.version}</version>
+                        <groupId>jakarta.platform</groupId>
+                        <artifactId>jakarta.jakartaee-api</artifactId>
+                        <version>${jee.api.version}</version>
                         <scope>runtime</scope>
                     </dependency>
                 </dependencies>

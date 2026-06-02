@@ -2,7 +2,7 @@ package uk.gov.justice.services.adapter.rest.processor.response;
 
 import static java.util.Optional.empty;
 import static java.util.UUID.randomUUID;
-import static javax.ws.rs.core.Response.Status.OK;
+import static jakarta.ws.rs.core.Response.Status.OK;
 import static org.apache.commons.io.IOUtils.toInputStream;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.sameInstance;
@@ -22,9 +22,9 @@ import java.io.InputStream;
 import java.util.Optional;
 import java.util.UUID;
 
-import javax.ws.rs.InternalServerErrorException;
-import javax.ws.rs.NotFoundException;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.InternalServerErrorException;
+import jakarta.ws.rs.NotFoundException;
+import jakarta.ws.rs.core.Response;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

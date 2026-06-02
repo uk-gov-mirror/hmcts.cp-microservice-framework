@@ -1,15 +1,15 @@
 package uk.gov.justice.services.persistence;
 
-import static javax.transaction.Status.STATUS_ACTIVE;
+import static jakarta.transaction.Status.STATUS_ACTIVE;
 
 import uk.gov.justice.services.core.interceptor.Interceptor;
 import uk.gov.justice.services.core.interceptor.InterceptorChain;
 import uk.gov.justice.services.core.interceptor.InterceptorContext;
 
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.transaction.SystemException;
-import javax.transaction.UserTransaction;
+import jakarta.inject.Inject;
+import jakarta.persistence.EntityManager;
+import jakarta.transaction.SystemException;
+import jakarta.transaction.UserTransaction;
 
 public class EntityManagerFlushInterceptor implements Interceptor {
 

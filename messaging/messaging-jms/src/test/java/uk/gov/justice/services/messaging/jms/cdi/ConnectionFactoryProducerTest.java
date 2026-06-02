@@ -8,8 +8,8 @@ import static org.mockito.Mockito.when;
 import uk.gov.justice.services.cdi.QualifierAnnotationExtractor;
 import uk.gov.justice.services.messaging.jms.annotation.ConnectionFactoryName;
 
-import javax.enterprise.inject.spi.InjectionPoint;
-import javax.jms.ConnectionFactory;
+import jakarta.enterprise.inject.spi.InjectionPoint;
+import jakarta.jms.ConnectionFactory;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

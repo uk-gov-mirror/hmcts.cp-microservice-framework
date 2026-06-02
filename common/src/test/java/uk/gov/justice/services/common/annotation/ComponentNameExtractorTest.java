@@ -15,7 +15,7 @@ import uk.gov.justice.services.core.annotation.DirectAdapter;
 import uk.gov.justice.services.core.annotation.FrameworkComponent;
 import uk.gov.justice.services.core.annotation.ServiceComponent;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

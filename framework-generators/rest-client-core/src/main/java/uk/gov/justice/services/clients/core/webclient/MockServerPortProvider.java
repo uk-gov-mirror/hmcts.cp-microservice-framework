@@ -7,8 +7,8 @@ import uk.gov.justice.services.clients.core.EndpointDefinition;
 
 import java.util.Optional;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class MockServerPortProvider {

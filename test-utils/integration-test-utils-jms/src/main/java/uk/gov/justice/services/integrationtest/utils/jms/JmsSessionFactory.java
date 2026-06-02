@@ -1,11 +1,11 @@
 package uk.gov.justice.services.integrationtest.utils.jms;
 
 import static java.lang.String.format;
-import static javax.jms.Session.AUTO_ACKNOWLEDGE;
+import static jakarta.jms.Session.AUTO_ACKNOWLEDGE;
 
-import javax.jms.Connection;
-import javax.jms.JMSException;
-import javax.jms.Session;
+import jakarta.jms.Connection;
+import jakarta.jms.JMSException;
+import jakarta.jms.Session;
 
 import org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory;
 
@@ -23,7 +23,6 @@ class JmsSessionFactory implements AutoCloseable {
     Session create(final String queueUri) {
 
         try {
-            activeMQConnectionFactory.setBrokerURL(queueUri);
             connection = activeMQConnectionFactory.createConnection();
             connection.start();
             session = connection.createSession(false, AUTO_ACKNOWLEDGE);

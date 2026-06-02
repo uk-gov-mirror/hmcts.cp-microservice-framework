@@ -18,7 +18,7 @@ import java.io.File;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import javax.interceptor.InvocationContext;
+import jakarta.interceptor.InvocationContext;
 
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.TypeSpec;

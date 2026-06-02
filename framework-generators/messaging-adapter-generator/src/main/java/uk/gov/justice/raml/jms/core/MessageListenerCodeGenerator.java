@@ -29,14 +29,14 @@ import uk.gov.justice.services.messaging.logging.LoggerUtils;
 import java.util.Map;
 import java.util.Optional;
 
-import javax.ejb.ActivationConfigProperty;
-import javax.ejb.MessageDriven;
-import javax.inject.Inject;
-import javax.interceptor.Interceptors;
-import javax.jms.Destination;
-import javax.jms.Message;
-import javax.jms.MessageListener;
-import javax.jms.Topic;
+import jakarta.ejb.ActivationConfigProperty;
+import jakarta.ejb.MessageDriven;
+import jakarta.inject.Inject;
+import jakarta.interceptor.Interceptors;
+import jakarta.jms.Destination;
+import jakarta.jms.Message;
+import jakarta.jms.MessageListener;
+import jakarta.jms.Topic;
 
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.ClassName;

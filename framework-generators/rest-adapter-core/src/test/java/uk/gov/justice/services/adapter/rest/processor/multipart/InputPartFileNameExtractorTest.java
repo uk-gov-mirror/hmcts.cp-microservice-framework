@@ -11,7 +11,7 @@ import uk.gov.justice.services.adapter.rest.multipart.InputPartFileNameExtractor
 
 import java.util.Map;
 
-import javax.ws.rs.core.MultivaluedHashMap;
+import jakarta.ws.rs.core.MultivaluedHashMap;
 
 import org.jboss.resteasy.plugins.providers.multipart.InputPart;
 import org.junit.jupiter.api.Test;

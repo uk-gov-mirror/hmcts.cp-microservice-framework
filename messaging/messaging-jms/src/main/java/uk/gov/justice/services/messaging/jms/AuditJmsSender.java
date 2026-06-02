@@ -1,19 +1,19 @@
 package uk.gov.justice.services.messaging.jms;
 
 import static java.lang.String.format;
-import static javax.jms.Session.AUTO_ACKNOWLEDGE;
+import static jakarta.jms.Session.AUTO_ACKNOWLEDGE;
 
 import uk.gov.justice.services.messaging.JsonEnvelope;
 import uk.gov.justice.services.messaging.jms.annotation.ConnectionFactoryName;
 import uk.gov.justice.services.messaging.jms.exception.JmsEnvelopeSenderException;
 
-import javax.inject.Inject;
-import javax.jms.Connection;
-import javax.jms.ConnectionFactory;
-import javax.jms.Destination;
-import javax.jms.JMSException;
-import javax.jms.MessageProducer;
-import javax.jms.Session;
+import jakarta.inject.Inject;
+import jakarta.jms.Connection;
+import jakarta.jms.ConnectionFactory;
+import jakarta.jms.Destination;
+import jakarta.jms.JMSException;
+import jakarta.jms.MessageProducer;
+import jakarta.jms.Session;
 
 public class AuditJmsSender implements EnvelopeSender {
 

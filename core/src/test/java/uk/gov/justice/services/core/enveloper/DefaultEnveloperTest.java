@@ -13,7 +13,7 @@ import uk.gov.justice.services.core.extension.EventFoundEvent;
 import uk.gov.justice.services.messaging.JsonEnvelope;
 import uk.gov.justice.services.messaging.spi.IncompatibleJsonPayloadTypeException;
 
-import javax.json.JsonValue;
+import jakarta.json.JsonValue;
 import java.util.UUID;
 
 import static java.util.Optional.empty;

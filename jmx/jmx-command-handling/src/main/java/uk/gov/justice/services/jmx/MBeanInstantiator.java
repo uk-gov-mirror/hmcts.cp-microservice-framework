@@ -7,11 +7,11 @@ import uk.gov.justice.services.jmx.api.name.CommandMBeanNameProvider;
 import uk.gov.justice.services.jmx.api.name.ObjectNameException;
 import uk.gov.justice.services.jmx.util.ContextNameProvider;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.ejb.Singleton;
-import javax.ejb.Startup;
-import javax.inject.Inject;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import jakarta.ejb.Singleton;
+import jakarta.ejb.Startup;
+import jakarta.inject.Inject;
 import javax.management.InstanceAlreadyExistsException;
 import javax.management.InstanceNotFoundException;
 import javax.management.MBeanRegistrationException;

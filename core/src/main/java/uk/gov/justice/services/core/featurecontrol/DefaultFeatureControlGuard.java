@@ -3,7 +3,7 @@ package uk.gov.justice.services.core.featurecontrol;
 import uk.gov.justice.services.core.featurecontrol.domain.Feature;
 import uk.gov.justice.services.core.featurecontrol.lookup.FeatureStore;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class DefaultFeatureControlGuard implements FeatureControlGuard {
 

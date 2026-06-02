@@ -38,8 +38,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Set;
 
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
+import jakarta.ws.rs.ApplicationPath;
+import jakarta.ws.rs.core.Application;
 
 import com.google.common.reflect.TypeToken;
 import org.junit.jupiter.api.Test;

@@ -12,7 +12,7 @@ import uk.gov.justice.services.metrics.micrometer.config.TagFactory;
 
 import java.util.List;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import io.micrometer.core.instrument.Tag;
 import io.micrometer.core.instrument.composite.CompositeMeterRegistry;

@@ -1,15 +1,15 @@
 package uk.gov.justice.services.messaging;
 
-import static javax.json.Json.createWriterFactory;
-import static javax.json.stream.JsonGenerator.PRETTY_PRINTING;
+import static jakarta.json.Json.createWriterFactory;
+import static jakarta.json.stream.JsonGenerator.PRETTY_PRINTING;
 
 import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.json.JsonObject;
-import javax.json.JsonWriter;
-import javax.json.JsonWriterFactory;
+import jakarta.json.JsonObject;
+import jakarta.json.JsonWriter;
+import jakarta.json.JsonWriterFactory;
 
 /**
  * Writer class to pretty print Json.
@@ -29,7 +29,7 @@ public class JsonEnvelopeWriter {
 
         try (final JsonWriter jsonWriter = writerFactory.createWriter(stringWriter)) {
             jsonWriter.writeObject(json);
-            return stringWriter.toString();
+            return "\n" + stringWriter.toString();
         }
     }
 

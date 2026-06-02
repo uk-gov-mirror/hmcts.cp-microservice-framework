@@ -76,10 +76,11 @@ public class EventFilterCodeGeneratorTest {
 
         final TypeSpec typeSpec = eventFilterCodeGenerator.generate(subscription, classNameFactory);
 
-        assertThat(typeSpec.toString(), is("@javax.enterprise.context.ApplicationScoped\n" +
+        assertThat(typeSpec.toString(), is("@jakarta.enterprise.context.ApplicationScoped\n" +
                 "public class MyContextEventListenerMyContextHandlerCommandEventFilter extends uk.gov.justice.services.event.buffer.api.AbstractEventFilter {\n" +
                 "  public MyContextEventListenerMyContextHandlerCommandEventFilter() {\n" +
-                "    super(\"my-context.events.something-happened\",\"my-context.events.something-else-happened\");}\n" +
+                "    super(\"my-context.events.something-happened\",\"my-context.events.something-else-happened\");\n" +
+                "  }\n" +
                 "}\n"));
     }
 }

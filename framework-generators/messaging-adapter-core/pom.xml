@@ -5,7 +5,7 @@
     <parent>
         <artifactId>framework-generators</artifactId>
         <groupId>uk.gov.justice.framework-generators</groupId>
-        <version>17.104.1-SNAPSHOT</version>
+        <version>21.0.0-M1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,8 +13,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -39,6 +39,10 @@
             <groupId>uk.gov.justice.framework-api</groupId>
             <artifactId>framework-api-subscription</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>uk.gov.justice.services</groupId>
+            <artifactId>common</artifactId>
         </dependency>
         <dependency>
             <groupId>uk.gov.justice.utils</groupId>

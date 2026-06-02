@@ -3,18 +3,18 @@ package uk.gov.justice.services.messaging.spi;
 import uk.gov.justice.services.messaging.JsonEnvelope;
 import uk.gov.justice.services.messaging.Metadata;
 
-import javax.json.JsonArray;
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonNumber;
-import javax.json.JsonObject;
-import javax.json.JsonObjectBuilder;
-import javax.json.JsonString;
-import javax.json.JsonValue;
+import jakarta.json.JsonArray;
+import jakarta.json.JsonArrayBuilder;
+import jakarta.json.JsonNumber;
+import jakarta.json.JsonObject;
+import jakarta.json.JsonObjectBuilder;
+import jakarta.json.JsonString;
+import jakarta.json.JsonValue;
 import java.util.List;
 import java.util.UUID;
 
 import static java.util.Objects.requireNonNullElse;
-import static javax.json.JsonValue.NULL;
+import static jakarta.json.JsonValue.NULL;
 import static uk.gov.justice.services.common.converter.JSONObjectValueObfuscator.obfuscated;
 import static uk.gov.justice.services.messaging.JsonEnvelopeWriter.writeJsonObject;
 import static uk.gov.justice.services.messaging.JsonMetadata.CORRELATION;

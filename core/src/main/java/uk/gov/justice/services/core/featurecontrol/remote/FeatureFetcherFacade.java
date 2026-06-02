@@ -8,7 +8,7 @@ import uk.gov.justice.services.core.featurecontrol.domain.Feature;
 
 import java.util.List;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.slf4j.Logger;
 

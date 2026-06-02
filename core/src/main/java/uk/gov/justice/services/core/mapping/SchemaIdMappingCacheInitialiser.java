@@ -7,8 +7,8 @@ import uk.gov.justice.services.core.extension.BeanInstantiater;
 import java.util.Map;
 import java.util.stream.Stream;
 
-import javax.enterprise.inject.spi.Bean;
-import javax.inject.Inject;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.inject.Inject;
 
 public class SchemaIdMappingCacheInitialiser {
 

@@ -31,14 +31,14 @@ import uk.gov.justice.subscription.domain.subscriptiondescriptor.SubscriptionsDe
 import java.util.List;
 import java.util.Optional;
 
-import javax.ejb.ActivationConfigProperty;
-import javax.ejb.MessageDriven;
-import javax.inject.Inject;
-import javax.interceptor.Interceptors;
-import javax.jms.Destination;
-import javax.jms.Message;
-import javax.jms.MessageListener;
-import javax.jms.Topic;
+import jakarta.ejb.ActivationConfigProperty;
+import jakarta.ejb.MessageDriven;
+import jakarta.inject.Inject;
+import jakarta.interceptor.Interceptors;
+import jakarta.jms.Destination;
+import jakarta.jms.Message;
+import jakarta.jms.MessageListener;
+import jakarta.jms.Topic;
 
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.ClassName;

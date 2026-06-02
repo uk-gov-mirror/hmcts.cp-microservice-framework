@@ -9,7 +9,7 @@ import static org.mockito.Mockito.mock;
 import uk.gov.justice.services.messaging.Envelope;
 import uk.gov.justice.services.messaging.JsonEnvelope;
 
-import javax.json.JsonValue;
+import jakarta.json.JsonValue;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.jupiter.api.Test;

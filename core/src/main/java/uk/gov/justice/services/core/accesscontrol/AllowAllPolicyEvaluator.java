@@ -6,9 +6,9 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 
 import java.util.Optional;
 
-import javax.annotation.Priority;
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Alternative;
+import jakarta.annotation.Priority;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Alternative;
 
 @ApplicationScoped
 @Alternative

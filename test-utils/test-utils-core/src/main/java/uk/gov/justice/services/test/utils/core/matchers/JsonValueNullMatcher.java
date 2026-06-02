@@ -1,6 +1,6 @@
 package uk.gov.justice.services.test.utils.core.matchers;
 
-import javax.json.JsonValue;
+import jakarta.json.JsonValue;
 
 import org.hamcrest.Description;
 import org.hamcrest.TypeSafeDiagnosingMatcher;

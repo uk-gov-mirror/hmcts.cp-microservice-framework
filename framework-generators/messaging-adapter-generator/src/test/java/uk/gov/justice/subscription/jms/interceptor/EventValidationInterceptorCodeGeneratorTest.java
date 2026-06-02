@@ -18,7 +18,7 @@ import uk.gov.justice.subscription.jms.core.ClassNameFactory;
 import java.io.File;
 import java.lang.reflect.Field;
 
-import javax.jms.TextMessage;
+import jakarta.jms.TextMessage;
 
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.TypeSpec;

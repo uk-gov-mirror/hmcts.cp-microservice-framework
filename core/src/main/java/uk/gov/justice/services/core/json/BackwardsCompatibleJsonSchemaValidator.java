@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.Priority;
-import javax.enterprise.inject.Alternative;
-import javax.faces.bean.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Priority;
+import jakarta.enterprise.inject.Alternative;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 /**
  * Service for validating JSON payloads against a schema contained in a catalog.

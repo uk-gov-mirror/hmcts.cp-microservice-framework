@@ -3,8 +3,8 @@ package uk.gov.justice.services.clients.core.webclient;
 import uk.gov.justice.services.clients.core.EndpointDefinition;
 import uk.gov.justice.services.common.configuration.JndiBasedServiceContextNameProvider;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class ContextMatcher {

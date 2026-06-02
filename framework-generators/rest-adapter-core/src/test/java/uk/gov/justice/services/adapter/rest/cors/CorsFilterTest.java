@@ -1,8 +1,8 @@
 package uk.gov.justice.services.adapter.rest.cors;
 
 import static java.lang.String.valueOf;
-import static javax.ws.rs.HttpMethod.OPTIONS;
-import static javax.ws.rs.HttpMethod.POST;
+import static jakarta.ws.rs.HttpMethod.OPTIONS;
+import static jakarta.ws.rs.HttpMethod.POST;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -19,12 +19,12 @@ import static uk.gov.justice.services.adapter.rest.cors.CorsHeaders.ACCESS_CONTR
 import static uk.gov.justice.services.adapter.rest.cors.CorsHeaders.ACCESS_CONTROL_REQUEST_METHOD;
 import static uk.gov.justice.services.adapter.rest.cors.CorsHeaders.ORIGIN;
 
-import javax.ws.rs.ForbiddenException;
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.container.ContainerResponseContext;
-import javax.ws.rs.core.MultivaluedHashMap;
-import javax.ws.rs.core.MultivaluedMap;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.ForbiddenException;
+import jakarta.ws.rs.container.ContainerRequestContext;
+import jakarta.ws.rs.container.ContainerResponseContext;
+import jakarta.ws.rs.core.MultivaluedHashMap;
+import jakarta.ws.rs.core.MultivaluedMap;
+import jakarta.ws.rs.core.Response;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

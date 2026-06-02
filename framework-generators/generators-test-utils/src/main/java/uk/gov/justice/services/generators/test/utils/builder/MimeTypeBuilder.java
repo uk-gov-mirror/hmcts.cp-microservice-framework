@@ -1,7 +1,7 @@
 package uk.gov.justice.services.generators.test.utils.builder;
 
 import static java.util.Collections.singletonList;
-import static javax.ws.rs.core.MediaType.MULTIPART_FORM_DATA;
+import static jakarta.ws.rs.core.MediaType.MULTIPART_FORM_DATA;
 import static org.raml.model.ParamType.FILE;
 
 import java.util.HashMap;

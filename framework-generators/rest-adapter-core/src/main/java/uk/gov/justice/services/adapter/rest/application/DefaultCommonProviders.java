@@ -10,7 +10,7 @@ import uk.gov.justice.services.common.rest.ForbiddenRequestExceptionMapper;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.enterprise.inject.Default;
+import jakarta.enterprise.inject.Default;
 
 /**
  * Configuration class containing common JAX-RS providers to be included in service level JAX-RS

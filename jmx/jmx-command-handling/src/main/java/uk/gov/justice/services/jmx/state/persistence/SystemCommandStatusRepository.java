@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 import javax.sql.DataSource;
 
 public class SystemCommandStatusRepository {

@@ -1,6 +1,6 @@
 package uk.gov.justice.services.jdbc.persistence;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 
 public class JndiAppNameProvider {
 

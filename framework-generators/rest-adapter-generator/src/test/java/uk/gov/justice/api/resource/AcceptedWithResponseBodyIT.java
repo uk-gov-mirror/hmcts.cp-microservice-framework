@@ -1,7 +1,7 @@
 package uk.gov.justice.api.resource;
 
 import static com.jayway.jsonassert.JsonAssert.with;
-import static javax.ws.rs.core.Response.Status.ACCEPTED;
+import static jakarta.ws.rs.core.Response.Status.ACCEPTED;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
@@ -64,8 +64,8 @@ import uk.gov.justice.subscription.domain.eventsource.DefaultEventSourceDefiniti
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -194,7 +194,7 @@ public class AcceptedWithResponseBodyIT {
         return new WebApp()
                 .contextRoot("rest-adapter-generator")
                 .addServlet("TestApp", Application.class.getName())
-                .addInitParam("TestApp", "javax.ws.rs.Application", CommandApiRestExampleApplication.class.getName());
+                .addInitParam("TestApp", "jakarta.ws.rs.Application", CommandApiRestExampleApplication.class.getName());
     }
 
     @Test

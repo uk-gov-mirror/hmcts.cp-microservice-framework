@@ -2,7 +2,7 @@ package uk.gov.justice.services.integrationtest.utils.jms;
 
 import uk.gov.justice.services.messaging.JsonEnvelope;
 
-import javax.json.JsonObject;
+import jakarta.json.JsonObject;
 
 public interface JmsMessageProducerClient {
 

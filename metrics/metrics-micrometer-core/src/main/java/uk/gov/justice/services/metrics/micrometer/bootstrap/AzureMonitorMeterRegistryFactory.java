@@ -4,7 +4,7 @@ import static io.micrometer.core.instrument.Clock.SYSTEM;
 
 import uk.gov.justice.services.metrics.micrometer.azure.config.FrameworkAzureMonitorConfig;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import io.micrometer.azuremonitor.AzureMonitorMeterRegistry;
 

@@ -1,7 +1,7 @@
 package uk.gov.justice.services.messaging.logging;
 
-import static javax.ws.rs.core.HttpHeaders.ACCEPT;
-import static javax.ws.rs.core.HttpHeaders.CONTENT_TYPE;
+import static jakarta.ws.rs.core.HttpHeaders.ACCEPT;
+import static jakarta.ws.rs.core.HttpHeaders.CONTENT_TYPE;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -14,10 +14,10 @@ import static uk.gov.justice.services.common.log.LoggerConstants.METADATA;
 
 import java.io.StringReader;
 
-import javax.json.JsonObject;
-import javax.ws.rs.core.HttpHeaders;
-import javax.ws.rs.core.MultivaluedHashMap;
-import javax.ws.rs.core.MultivaluedMap;
+import jakarta.json.JsonObject;
+import jakarta.ws.rs.core.HttpHeaders;
+import jakarta.ws.rs.core.MultivaluedHashMap;
+import jakarta.ws.rs.core.MultivaluedMap;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

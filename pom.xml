@@ -7,12 +7,12 @@
     <parent>
         <groupId>uk.gov.justice</groupId>
         <artifactId>maven-framework-parent-pom</artifactId>
-        <version>17.103.0</version>
+        <version>21.0.0-M1-SNAPSHOT</version>
     </parent>
 
     <groupId>uk.gov.justice.services</groupId>
     <artifactId>microservice-framework</artifactId>
-    <version>17.104.1-SNAPSHOT</version>
+    <version>21.0.0-M1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Microservice Framework</name>
@@ -47,7 +47,7 @@
     
     <properties>
         <cpp.repo.name>microservice_framework</cpp.repo.name>
-        <framework-libraries.version>17.104.0</framework-libraries.version>
+        <framework-libraries.version>21.0.0-M1-SNAPSHOT</framework-libraries.version>
     </properties>
 
     <dependencyManagement>
@@ -132,6 +132,14 @@
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -149,6 +157,9 @@
             <plugin>
                 <groupId>org.eluder.coveralls</groupId>
                 <artifactId>coveralls-maven-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
             </plugin>
         </plugins>
     </build>

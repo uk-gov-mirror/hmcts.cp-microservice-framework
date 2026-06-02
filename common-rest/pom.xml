@@ -5,7 +5,7 @@
     <parent>
         <artifactId>microservice-framework</artifactId>
         <groupId>uk.gov.justice.services</groupId>
-        <version>17.104.1-SNAPSHOT</version>
+        <version>21.0.0-M1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,8 +13,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -67,12 +67,17 @@
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-jaxrs</artifactId>
+            <artifactId>resteasy-core</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.glassfish</groupId>
-            <artifactId>javax.json</artifactId>
+            <artifactId>jakarta.json</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.parsson</groupId>
+            <artifactId>parsson</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>

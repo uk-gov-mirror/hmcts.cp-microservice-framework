@@ -19,13 +19,13 @@ import uk.gov.justice.services.messaging.logging.HttpTraceLoggerHelper;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
-import javax.inject.Inject;
-import javax.ws.rs.WebApplicationException;
-import javax.ws.rs.core.MultivaluedHashMap;
-import javax.ws.rs.core.MultivaluedMap;
-import javax.ws.rs.ext.Provider;
-import javax.ws.rs.ext.ReaderInterceptor;
-import javax.ws.rs.ext.ReaderInterceptorContext;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.WebApplicationException;
+import jakarta.ws.rs.core.MultivaluedHashMap;
+import jakarta.ws.rs.core.MultivaluedMap;
+import jakarta.ws.rs.ext.Provider;
+import jakarta.ws.rs.ext.ReaderInterceptor;
+import jakarta.ws.rs.ext.ReaderInterceptorContext;
 
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;

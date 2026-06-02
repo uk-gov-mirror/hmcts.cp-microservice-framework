@@ -4,7 +4,7 @@ import static org.apache.commons.lang3.StringUtils.isNotBlank;
 
 import uk.gov.justice.services.messaging.jms.annotation.ConnectionFactoryName;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class JmsConnectionFactoryJndiNameProvider {
 

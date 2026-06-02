@@ -1,7 +1,7 @@
 package uk.gov.justice.services.metrics.micrometer.prometheus;
 
-import javax.enterprise.context.Dependent;
-import javax.inject.Inject;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
 
 import io.micrometer.core.instrument.Timer;
 import io.micrometer.prometheusmetrics.PrometheusMeterRegistry;

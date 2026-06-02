@@ -1,6 +1,6 @@
 package uk.gov.justice.services.management.suspension.executors;
 
-import static javax.transaction.Transactional.TxType.REQUIRED;
+import static jakarta.transaction.Transactional.TxType.REQUIRED;
 
 import uk.gov.justice.services.common.polling.MultiIteratingPoller;
 import uk.gov.justice.services.common.polling.MultiIteratingPollerFactory;
@@ -10,9 +10,9 @@ import uk.gov.justice.services.shuttering.persistence.StoredCommandRepository;
 
 import java.util.stream.Stream;
 
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.transaction.Transactional;
+import jakarta.ejb.Stateless;
+import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 
 @Stateless
 public class CommandApiSuspensionBean {

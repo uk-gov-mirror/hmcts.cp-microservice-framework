@@ -5,10 +5,10 @@ import uk.gov.justice.services.test.utils.core.messaging.TopicFactory;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.jms.Destination;
-import javax.jms.JMSException;
-import javax.jms.MessageProducer;
-import javax.jms.Session;
+import jakarta.jms.Destination;
+import jakarta.jms.JMSException;
+import jakarta.jms.MessageProducer;
+import jakarta.jms.Session;
 
 class JmsMessageProducerFactory {
 

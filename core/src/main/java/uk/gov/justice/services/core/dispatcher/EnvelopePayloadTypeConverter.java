@@ -4,7 +4,7 @@ import static uk.gov.justice.services.messaging.Envelope.envelopeFrom;
 
 import uk.gov.justice.services.messaging.Envelope;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

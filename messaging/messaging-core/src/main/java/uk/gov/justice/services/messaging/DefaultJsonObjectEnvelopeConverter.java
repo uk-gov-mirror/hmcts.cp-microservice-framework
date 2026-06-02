@@ -4,16 +4,16 @@ package uk.gov.justice.services.messaging;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import javax.json.JsonObject;
-import javax.json.JsonObjectBuilder;
-import javax.json.JsonReader;
-import javax.json.JsonValue;
-import javax.json.JsonValue.ValueType;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.json.JsonObject;
+import jakarta.json.JsonObjectBuilder;
+import jakarta.json.JsonReader;
+import jakarta.json.JsonValue;
+import jakarta.json.JsonValue.ValueType;
 import java.io.StringReader;
 
-import static javax.json.JsonValue.ValueType.OBJECT;
+import static jakarta.json.JsonValue.ValueType.OBJECT;
 import static uk.gov.justice.services.messaging.JsonEnvelope.METADATA;
 import static uk.gov.justice.services.messaging.JsonEnvelope.envelopeFrom;
 import static uk.gov.justice.services.messaging.JsonEnvelope.metadataFrom;

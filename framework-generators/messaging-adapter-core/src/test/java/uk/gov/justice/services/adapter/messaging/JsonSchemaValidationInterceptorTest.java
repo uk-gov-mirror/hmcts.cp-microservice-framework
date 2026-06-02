@@ -17,8 +17,8 @@ import uk.gov.justice.services.core.mapping.MediaType;
 import uk.gov.justice.services.core.mapping.NameToMediaTypeConverter;
 import uk.gov.justice.services.messaging.logging.JmsMessageLoggerHelper;
 
-import javax.interceptor.InvocationContext;
-import javax.jms.TextMessage;
+import jakarta.interceptor.InvocationContext;
+import jakarta.jms.TextMessage;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

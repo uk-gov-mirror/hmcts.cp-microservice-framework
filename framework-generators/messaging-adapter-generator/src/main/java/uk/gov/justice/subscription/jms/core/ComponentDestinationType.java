@@ -12,9 +12,9 @@ import uk.gov.justice.services.core.annotation.Component;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.jms.Destination;
-import javax.jms.Queue;
-import javax.jms.Topic;
+import jakarta.jms.Destination;
+import jakarta.jms.Queue;
+import jakarta.jms.Topic;
 
 /**
  * Maps a {@link Component} to the input {@link Destination} type.

@@ -7,7 +7,7 @@ import uk.gov.justice.services.messaging.Metadata;
 
 import java.util.Optional;
 
-import javax.json.JsonValue;
+import jakarta.json.JsonValue;
 
 import com.jayway.jsonpath.matchers.IsJson;
 import org.hamcrest.Description;

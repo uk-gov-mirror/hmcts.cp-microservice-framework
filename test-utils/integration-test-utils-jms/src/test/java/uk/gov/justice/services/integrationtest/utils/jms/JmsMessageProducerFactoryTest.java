@@ -16,9 +16,9 @@ import uk.gov.justice.services.test.utils.core.reflection.ReflectionUtil;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.jms.JMSException;
-import javax.jms.MessageProducer;
-import javax.jms.Session;
+import jakarta.jms.JMSException;
+import jakarta.jms.MessageProducer;
+import jakarta.jms.Session;
 
 import org.apache.activemq.artemis.jms.client.ActiveMQTopic;
 import org.junit.jupiter.api.BeforeEach;

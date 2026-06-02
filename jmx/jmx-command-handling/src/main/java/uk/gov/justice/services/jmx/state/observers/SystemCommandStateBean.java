@@ -1,6 +1,6 @@
 package uk.gov.justice.services.jmx.state.observers;
 
-import static javax.transaction.Transactional.TxType.REQUIRES_NEW;
+import static jakarta.transaction.Transactional.TxType.REQUIRES_NEW;
 import static uk.gov.justice.services.jmx.api.domain.CommandState.COMMAND_IN_PROGRESS;
 import static uk.gov.justice.services.jmx.api.domain.CommandState.COMMAND_RECEIVED;
 
@@ -12,9 +12,9 @@ import uk.gov.justice.services.jmx.state.persistence.SystemCommandStatusReposito
 import java.util.Optional;
 import java.util.UUID;
 
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.transaction.Transactional;
+import jakarta.ejb.Stateless;
+import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 
 @Stateless
 public class SystemCommandStateBean {

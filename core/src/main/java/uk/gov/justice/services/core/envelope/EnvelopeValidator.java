@@ -1,7 +1,7 @@
 package uk.gov.justice.services.core.envelope;
 
 import static java.lang.String.format;
-import static javax.json.JsonValue.NULL;
+import static jakarta.json.JsonValue.NULL;
 
 import uk.gov.justice.services.core.json.DefaultJsonValidationLoggerHelper;
 import uk.gov.justice.services.core.json.JsonSchemaValidationException;
@@ -12,7 +12,7 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 
 import java.util.Optional;
 
-import javax.json.JsonValue;
+import jakarta.json.JsonValue;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

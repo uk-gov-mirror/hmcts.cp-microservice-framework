@@ -2,9 +2,9 @@ package uk.gov.justice.services.core.envelope;
 
 import uk.gov.justice.services.common.configuration.GlobalValue;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Produces;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Produces;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class EnvelopeValidationExceptionHandlerProducer {

@@ -5,15 +5,15 @@
     <parent>
         <artifactId>framework-generators</artifactId>
         <groupId>uk.gov.justice.framework-generators</groupId>
-        <version>17.104.1-SNAPSHOT</version>
+        <version>21.0.0-M1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>unifiedsearch-client-generator</artifactId>
     <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -117,19 +117,42 @@
                         <version>${project.version}</version>
                     </dependency>
                     <dependency>
-                    <artifactId>unifiedsearch-core</artifactId>
-                    <groupId>uk.gov.justice.framework-generators</groupId>
-                    <version>${project.version}</version>
-                </dependency>
+                        <artifactId>unifiedsearch-core</artifactId>
+                        <groupId>uk.gov.justice.framework-generators</groupId>
+                        <version>${project.version}</version>
+                    </dependency>
                     <dependency>
                         <groupId>uk.gov.justice.framework-generators</groupId>
                         <artifactId>generators-commons</artifactId>
                         <version>${project.version}</version>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>org.glassfish</groupId>
+                                <artifactId>javax.json</artifactId>
+                            </exclusion>
+                        </exclusions>
                     </dependency>
                     <dependency>
-                        <groupId>javax</groupId>
-                        <artifactId>javaee-api</artifactId>
-                        <version>${javaee-api.version}</version>
+                        <groupId>org.eclipse.parsson</groupId>
+                        <artifactId>parsson</artifactId>
+                        <version>${parsson.version}</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.glassfish</groupId>
+                        <artifactId>jakarta.json</artifactId>
+                        <version>${glassfish-json.version}</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.fasterxml.jackson.datatype</groupId>
+                        <artifactId>jackson-datatype-jakarta-jsonp</artifactId>
+                        <version>${jackson-datatype-jakarta-jsonp.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>jakarta.platform</groupId>
+                        <artifactId>jakarta.jakartaee-api</artifactId>
+                        <version>${jee.api.version}</version>
                         <scope>runtime</scope>
                     </dependency>
                 </dependencies>

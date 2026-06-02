@@ -10,13 +10,13 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicReference;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
-import javax.ejb.Singleton;
-import javax.ejb.Startup;
-import javax.ejb.Timeout;
-import javax.ejb.TimerService;
-import javax.inject.Inject;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Resource;
+import jakarta.ejb.Singleton;
+import jakarta.ejb.Startup;
+import jakarta.ejb.Timeout;
+import jakarta.ejb.TimerService;
+import jakarta.inject.Inject;
 
 @Singleton
 @Startup

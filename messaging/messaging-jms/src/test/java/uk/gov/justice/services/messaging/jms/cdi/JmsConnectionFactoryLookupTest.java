@@ -8,7 +8,7 @@ import static org.mockito.Mockito.when;
 
 import uk.gov.justice.services.messaging.jms.JndiException;
 
-import javax.jms.ConnectionFactory;
+import jakarta.jms.ConnectionFactory;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 

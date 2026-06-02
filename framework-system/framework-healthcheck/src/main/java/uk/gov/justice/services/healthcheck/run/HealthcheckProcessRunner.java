@@ -10,7 +10,7 @@ import uk.gov.justice.services.healthcheck.registration.HealthcheckRegistry;
 
 import java.util.List;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class HealthcheckProcessRunner {
 

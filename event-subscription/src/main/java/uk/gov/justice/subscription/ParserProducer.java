@@ -5,9 +5,9 @@ import uk.gov.justice.services.yaml.YamlParser;
 import uk.gov.justice.services.yaml.YamlSchemaLoader;
 import uk.gov.justice.services.yaml.YamlToJsonObjectConverter;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Produces;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Produces;
+import jakarta.inject.Inject;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

@@ -3,8 +3,8 @@ package uk.gov.justice.services.core.json;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 import org.everit.json.schema.Schema;
 import org.everit.json.schema.ValidationException;

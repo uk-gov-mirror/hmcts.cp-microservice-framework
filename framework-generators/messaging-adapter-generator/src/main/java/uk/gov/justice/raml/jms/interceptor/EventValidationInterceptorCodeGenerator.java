@@ -10,8 +10,8 @@ import static uk.gov.justice.raml.jms.core.ClassNameFactory.EVENT_VALIDATION_INT
 import uk.gov.justice.raml.jms.core.ClassNameFactory;
 import uk.gov.justice.services.adapter.messaging.JsonSchemaValidationInterceptor;
 
-import javax.jms.JMSException;
-import javax.jms.TextMessage;
+import jakarta.jms.JMSException;
+import jakarta.jms.TextMessage;
 
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.MethodSpec;

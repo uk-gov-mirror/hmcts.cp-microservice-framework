@@ -1,7 +1,7 @@
 package uk.gov.justice.services.common.rest;
 
 import static com.jayway.jsonpath.matchers.JsonPathMatchers.hasJsonPath;
-import static javax.ws.rs.core.Response.Status.FORBIDDEN;
+import static jakarta.ws.rs.core.Response.Status.FORBIDDEN;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -9,7 +9,7 @@ import static org.hamcrest.core.Is.is;
 
 import uk.gov.justice.services.common.exception.ForbiddenRequestException;
 
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.core.Response;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

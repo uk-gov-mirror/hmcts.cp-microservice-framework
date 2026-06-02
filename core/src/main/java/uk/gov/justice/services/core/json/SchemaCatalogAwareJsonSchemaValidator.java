@@ -6,8 +6,8 @@ import uk.gov.justice.services.core.mapping.SchemaIdMappingCache;
 
 import java.util.Optional;
 
-import javax.faces.bean.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 import org.everit.json.schema.Schema;
 import org.everit.json.schema.ValidationException;

@@ -5,13 +5,13 @@
     <parent>
         <artifactId>framework-generators</artifactId>
         <groupId>uk.gov.justice.framework-generators</groupId>
-        <version>17.104.1-SNAPSHOT</version>
+        <version>21.0.0-M1-SNAPSHOT</version>
     </parent>
     <artifactId>messaging-adapter-generator</artifactId>
     <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -164,11 +164,6 @@
         <dependency>
             <groupId>org.apache.activemq</groupId>
             <artifactId>artemis-ra</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>uk.gov.justice.artemis</groupId>
-            <artifactId>embedded-artemis</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -419,11 +414,35 @@
                         <groupId>uk.gov.justice.framework-generators</groupId>
                         <artifactId>messaging-adapter-generator</artifactId>
                         <version>${project.version}</version>
+                        <exclusions>
+                            <!-- Exclude old javax.* namespace JSON-P impl; jakarta.* version is added below -->
+                            <exclusion>
+                                <groupId>org.glassfish</groupId>
+                                <artifactId>javax.json</artifactId>
+                            </exclusion>
+                        </exclusions>
                     </dependency>
                     <dependency>
-                        <groupId>javax</groupId>
-                        <artifactId>javaee-api</artifactId>
-                        <version>${javaee-api.version}</version>
+                        <groupId>org.eclipse.parsson</groupId>
+                        <artifactId>parsson</artifactId>
+                        <version>${parsson.version}</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.glassfish</groupId>
+                        <artifactId>jakarta.json</artifactId>
+                        <version>${glassfish-json.version}</version>
+                        <scope>runtime</scope>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.fasterxml.jackson.datatype</groupId>
+                        <artifactId>jackson-datatype-jakarta-jsonp</artifactId>
+                        <version>${jackson-datatype-jakarta-jsonp.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>jakarta.platform</groupId>
+                        <artifactId>jakarta.jakartaee-api</artifactId>
+                        <version>${jee.api.version}</version>
                         <scope>runtime</scope>
                     </dependency>
                     <dependency>

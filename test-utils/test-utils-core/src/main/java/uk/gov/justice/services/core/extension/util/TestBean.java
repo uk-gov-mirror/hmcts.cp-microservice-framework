@@ -4,9 +4,9 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 import java.util.Set;
 
-import javax.enterprise.context.spi.CreationalContext;
-import javax.enterprise.inject.spi.Bean;
-import javax.enterprise.inject.spi.InjectionPoint;
+import jakarta.enterprise.context.spi.CreationalContext;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.enterprise.inject.spi.InjectionPoint;
 
 public class TestBean<T> implements Bean {
 
@@ -29,11 +29,6 @@ public class TestBean<T> implements Bean {
     @Override
     public Set<InjectionPoint> getInjectionPoints() {
         return null;
-    }
-
-    @Override
-    public boolean isNullable() {
-        return false;
     }
 
     @Override

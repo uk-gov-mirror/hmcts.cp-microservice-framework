@@ -1,8 +1,8 @@
 package uk.gov.justice.services.metrics.interceptor;
 
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Produces;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Produces;
 
 import com.codahale.metrics.JmxReporter;
 import com.codahale.metrics.MetricRegistry;

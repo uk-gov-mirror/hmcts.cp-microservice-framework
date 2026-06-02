@@ -2,15 +2,15 @@ package uk.gov.justice.services.adapter.rest.mapping;
 
 import static java.lang.String.format;
 import static java.util.Collections.emptyMap;
-import static javax.ws.rs.HttpMethod.GET;
+import static jakarta.ws.rs.HttpMethod.GET;
 
 import uk.gov.justice.services.adapter.rest.exception.BadRequestException;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.ws.rs.core.HttpHeaders;
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.HttpHeaders;
+import jakarta.ws.rs.core.MediaType;
 
 
 public class BasicActionMapperHelper implements ActionMapperHelper {

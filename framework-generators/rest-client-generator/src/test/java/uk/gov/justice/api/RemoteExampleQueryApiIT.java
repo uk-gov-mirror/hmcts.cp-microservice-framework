@@ -80,9 +80,9 @@ import uk.gov.justice.services.test.utils.common.validator.DummyJsonSchemaValida
 import uk.gov.justice.services.test.utils.core.handler.registry.TestHandlerRegistryCacheProducer;
 import uk.gov.justice.subscription.domain.eventsource.DefaultEventSourceDefinitionFactory;
 
-import javax.annotation.Priority;
-import javax.enterprise.inject.Alternative;
-import javax.inject.Inject;
+import jakarta.annotation.Priority;
+import jakarta.enterprise.inject.Alternative;
+import jakarta.inject.Inject;
 import java.util.Optional;
 import java.util.Properties;
 import java.util.UUID;

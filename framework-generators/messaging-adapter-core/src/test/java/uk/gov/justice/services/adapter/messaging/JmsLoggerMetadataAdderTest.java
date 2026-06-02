@@ -13,9 +13,9 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 import uk.gov.justice.services.messaging.logging.JmsMessageLoggerHelper;
 import uk.gov.justice.services.messaging.logging.TraceLogger;
 
-import javax.interceptor.InvocationContext;
-import javax.jms.TextMessage;
-import javax.json.JsonObject;
+import jakarta.interceptor.InvocationContext;
+import jakarta.jms.TextMessage;
+import jakarta.json.JsonObject;
 import java.util.UUID;
 
 import static com.jayway.jsonpath.matchers.JsonPathMatchers.isJson;

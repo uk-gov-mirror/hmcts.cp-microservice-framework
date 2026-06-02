@@ -5,7 +5,7 @@ import static java.lang.String.format;
 import uk.gov.justice.services.healthcheck.api.Healthcheck;
 import uk.gov.justice.services.healthcheck.api.HealthcheckResult;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.slf4j.Logger;
 

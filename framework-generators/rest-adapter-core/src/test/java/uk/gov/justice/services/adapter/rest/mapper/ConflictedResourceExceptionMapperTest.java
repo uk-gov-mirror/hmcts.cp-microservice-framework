@@ -2,7 +2,7 @@ package uk.gov.justice.services.adapter.rest.mapper;
 
 import static com.jayway.jsonpath.matchers.JsonPathMatchers.hasJsonPath;
 import static java.util.UUID.randomUUID;
-import static javax.ws.rs.core.Response.Status.CONFLICT;
+import static jakarta.ws.rs.core.Response.Status.CONFLICT;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -12,7 +12,7 @@ import uk.gov.justice.services.adapter.rest.exception.ConflictedResourceExceptio
 
 import java.util.UUID;
 
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.core.Response;
 
 import org.everit.json.schema.Schema;
 import org.junit.jupiter.api.Test;

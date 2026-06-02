@@ -4,7 +4,7 @@ import uk.gov.justice.services.core.featurecontrol.domain.Feature;
 
 import java.util.Optional;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class RemoteFeatureStore {
 

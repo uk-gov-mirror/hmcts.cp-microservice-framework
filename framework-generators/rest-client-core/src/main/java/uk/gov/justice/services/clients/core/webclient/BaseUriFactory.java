@@ -5,9 +5,9 @@ import uk.gov.justice.services.common.rest.ServerPortProvider;
 
 import java.util.Optional;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Default;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Default;
+import jakarta.inject.Inject;
 
 @ApplicationScoped
 @Default

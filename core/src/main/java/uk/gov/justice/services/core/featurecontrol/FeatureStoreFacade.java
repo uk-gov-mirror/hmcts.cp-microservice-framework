@@ -7,7 +7,7 @@ import uk.gov.justice.services.core.featurecontrol.remote.RemoteFeatureStore;
 
 import java.util.Optional;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 public class FeatureStoreFacade implements FeatureStore {
 

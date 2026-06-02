@@ -2,8 +2,8 @@ package uk.gov.justice.services.jmx;
 
 import static java.lang.management.ManagementFactory.getPlatformMBeanServer;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Produces;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Produces;
 import javax.management.MBeanServer;
 
 @ApplicationScoped

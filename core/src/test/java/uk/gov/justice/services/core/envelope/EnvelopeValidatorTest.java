@@ -1,7 +1,7 @@
 package uk.gov.justice.services.core.envelope;
 
 import static java.util.Optional.of;
-import static javax.json.JsonValue.NULL;
+import static jakarta.json.JsonValue.NULL;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.Mockito.doThrow;
@@ -18,7 +18,7 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 
 import java.util.Optional;
 
-import javax.json.JsonValue;
+import jakarta.json.JsonValue;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonProcessingException;

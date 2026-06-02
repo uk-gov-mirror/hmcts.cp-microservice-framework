@@ -1,22 +1,21 @@
 package uk.gov.justice.services.metrics.servlet;
 
-import static com.codahale.metrics.servlets.HealthCheckServlet.ContextListener;
-
-import javax.servlet.annotation.WebListener;
-
-import com.codahale.metrics.health.HealthCheckRegistry;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
+import jakarta.servlet.annotation.WebListener;
 
 /**
- * Annotated context listener for wiring up the health check servlet.
+ * Servlet context listener for health check registration.
+ * Health checks are now managed via CDI through HealthcheckServlet.
  */
 @WebListener
-public class HealthCheckServletContextListener extends ContextListener {
-
-    public static final HealthCheckRegistry HEALTH_CHECK_REGISTRY = new HealthCheckRegistry();
+public class HealthCheckServletContextListener implements ServletContextListener {
 
     @Override
-    protected HealthCheckRegistry getHealthCheckRegistry() {
-        return HEALTH_CHECK_REGISTRY;
+    public void contextInitialized(final ServletContextEvent sce) {
     }
 
+    @Override
+    public void contextDestroyed(final ServletContextEvent sce) {
+    }
 }

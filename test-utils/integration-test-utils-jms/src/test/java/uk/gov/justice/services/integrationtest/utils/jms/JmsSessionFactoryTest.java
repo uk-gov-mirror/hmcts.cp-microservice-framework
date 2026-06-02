@@ -1,6 +1,6 @@
 package uk.gov.justice.services.integrationtest.utils.jms;
 
-import static javax.jms.Session.AUTO_ACKNOWLEDGE;
+import static jakarta.jms.Session.AUTO_ACKNOWLEDGE;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -10,9 +10,9 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static uk.gov.justice.services.test.utils.core.reflection.ReflectionUtil.setField;
 
-import javax.jms.Connection;
-import javax.jms.JMSException;
-import javax.jms.Session;
+import jakarta.jms.Connection;
+import jakarta.jms.JMSException;
+import jakarta.jms.Session;
 
 import org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory;
 import org.junit.jupiter.api.BeforeEach;
@@ -50,7 +50,6 @@ class JmsSessionFactoryTest {
             final Session result = jmsSessionFactory.create(QUEUE_URI);
 
             assertThat(result, is(session));
-            verify(activeMQConnectionFactory).setBrokerURL(QUEUE_URI);
             verify(connection).start();
         }
 

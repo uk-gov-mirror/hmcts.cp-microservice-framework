@@ -15,10 +15,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
-import javax.annotation.PostConstruct;
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.spi.Bean;
-import javax.inject.Inject;
+import jakarta.annotation.PostConstruct;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.spi.Bean;
+import jakarta.inject.Inject;
 
 
 /**

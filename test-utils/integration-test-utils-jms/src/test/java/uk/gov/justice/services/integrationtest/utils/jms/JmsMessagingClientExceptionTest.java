@@ -3,7 +3,7 @@ package uk.gov.justice.services.integrationtest.utils.jms;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-import javax.jms.JMSException;
+import jakarta.jms.JMSException;
 
 import org.junit.jupiter.api.Test;
 

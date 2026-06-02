@@ -1,7 +1,7 @@
 package uk.gov.justice.services.adapter.rest.processor.response;
 
 import static java.util.UUID.randomUUID;
-import static javax.ws.rs.core.Response.Status.ACCEPTED;
+import static jakarta.ws.rs.core.Response.Status.ACCEPTED;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
@@ -14,7 +14,7 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 import java.util.Optional;
 import java.util.UUID;
 
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.core.Response;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -75,8 +75,8 @@ import uk.gov.justice.subscription.domain.eventsource.DefaultEventSourceDefiniti
 import java.util.LinkedList;
 import java.util.List;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.openejb.jee.Application;

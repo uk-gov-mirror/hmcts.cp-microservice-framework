@@ -10,7 +10,7 @@ import uk.gov.justice.services.event.buffer.api.AbstractEventFilter;
 import uk.gov.justice.subscription.domain.subscriptiondescriptor.Event;
 import uk.gov.justice.subscription.domain.subscriptiondescriptor.Subscription;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 import com.squareup.javapoet.TypeSpec;
 

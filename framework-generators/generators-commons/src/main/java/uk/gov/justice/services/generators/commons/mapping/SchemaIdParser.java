@@ -3,8 +3,8 @@ package uk.gov.justice.services.generators.commons.mapping;
 import org.raml.model.MimeType;
 import uk.gov.justice.services.messaging.JsonObjects;
 
-import javax.json.JsonObject;
-import javax.json.JsonReader;
+import jakarta.json.JsonObject;
+import jakarta.json.JsonReader;
 import java.io.StringReader;
 import java.util.Optional;
 

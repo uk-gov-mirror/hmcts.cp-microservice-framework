@@ -9,7 +9,7 @@ import uk.gov.justice.services.messaging.JsonEnvelope;
 import java.util.Optional;
 import java.util.function.Function;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class DefaultDirectAdapterProcessor implements DirectAdapterProcessor {

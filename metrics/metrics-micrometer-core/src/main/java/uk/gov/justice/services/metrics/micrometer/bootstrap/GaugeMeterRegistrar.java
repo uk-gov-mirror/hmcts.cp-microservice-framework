@@ -2,7 +2,7 @@ package uk.gov.justice.services.metrics.micrometer.bootstrap;
 
 import static java.lang.String.format;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.MeterRegistry;

@@ -21,7 +21,7 @@ import uk.gov.justice.services.test.utils.core.compiler.JavaCompilerUtility;
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 
-import javax.ws.rs.core.HttpHeaders;
+import jakarta.ws.rs.core.HttpHeaders;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
