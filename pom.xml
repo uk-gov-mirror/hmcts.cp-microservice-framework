@@ -7,7 +7,7 @@
     <parent>
         <groupId>uk.gov.justice</groupId>
         <artifactId>maven-framework-parent-pom</artifactId>
-        <version>21.0.0-M1-SNAPSHOT</version>
+        <version>21.0.0-M3</version>
     </parent>
 
     <groupId>uk.gov.justice.services</groupId>
@@ -48,6 +48,18 @@
     <properties>
         <cpp.repo.name>microservice_framework</cpp.repo.name>
         <framework-libraries.version>21.0.0-M1-SNAPSHOT</framework-libraries.version>
+        <!--
+            jakarta.xml.bind-api is managed by the BOM at 4.0.0 (Jakarta EE 10,
+            namespace jakarta.xml.bind.*). The RAML parser (org.raml:raml-parser)
+            uses javax.xml.bind.* classes internally. Those classes only exist in
+            versions 2.x of jakarta.xml.bind-api (before the EE 9 namespace change).
+            From 3.0.0 onwards the namespace became jakarta.xml.bind.* and
+            javax.xml.bind.* is no longer provided.
+            Any plugin that uses the RAML parser must pin its runtime classpath
+            to ${jakarta.xml.bind-api.raml.version} to avoid NoClassDefFoundError on
+            javax/xml/bind/SchemaOutputResolver. DO NOT upgrade to 3.x or 4.x.
+        -->
+        <jakarta.xml.bind-api.raml.version>2.3.2</jakarta.xml.bind-api.raml.version>
     </properties>
 
     <dependencyManagement>
