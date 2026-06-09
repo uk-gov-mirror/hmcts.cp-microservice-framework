@@ -5,6 +5,19 @@ on [Keep a CHANGELOG](http://keepachangelog.com/). This project adheres to
 
 ## [Unreleased]
 
+## [25.104.0-M1] - 2026-06-09
+### Changed
+- Upgraded to Java 25 and Jakarta EE 11 (25.104.x release line)
+- Upgraded parent POM to `maven-framework-parent-pom:25.104.0-M3`
+- Updated `framework-libraries.version` to `25.104.0-M6`
+- Migrated all Java source files from Jakarta EE 10 to Jakarta EE 11 APIs
+- Added `containsHeaderString` implementation to `HeadersBuilder` for Jakarta WS-RS 4.0 compatibility
+
+### Fixed
+- Fixed `generators-commons` test isolation: use `@TempDir outputFolder` directly instead of `outputFolder.getParentFile()` to prevent cross-test temp directory contamination
+- Fixed `JavaCompilerUtility.getClassNames()`: return only subtype values from the reflections 0.10.x store, not keys (supertypes) — prevented `compiledInterfaceOf` finding multiple interfaces
+- Fixed Liquibase Maven plugin mojo loading failure (`LOG_FORMAT` field removed in 4.24+): pinned `liquibase-maven-plugin` to `4.10.0` via `liquibase.maven.plugin.version` root pom property
+
 ## [21.0.0-M1] - 2026-06-02
 ### Changed
 - Upgraded to Java 21 and Jakarta EE 10 (17.104.x release line)
