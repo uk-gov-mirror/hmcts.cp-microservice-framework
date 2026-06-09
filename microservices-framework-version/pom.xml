@@ -6,7 +6,7 @@
     <parent>
         <groupId>uk.gov.justice.services</groupId>
         <artifactId>microservice-framework</artifactId>
-        <version>25.104.0-M1-SNAPSHOT</version>
+        <version>25.104.0-M1</version>
     </parent>
 
     <artifactId>microservices-framework-version</artifactId>
