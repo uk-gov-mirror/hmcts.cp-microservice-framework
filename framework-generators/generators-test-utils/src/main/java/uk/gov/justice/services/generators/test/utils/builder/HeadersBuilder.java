@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import jakarta.ws.rs.core.Cookie;
@@ -72,6 +73,15 @@ public class HeadersBuilder {
             @Override
             public int getLength() {
                 return -1;
+            }
+
+            @Override
+            public boolean containsHeaderString(final String name, final String valueSeparatorRegex, final Predicate<String> valuePredicate) {
+                final List<String> values = headersMap.getOrDefault(name, Collections.emptyList());
+                return values.stream()
+                        .flatMap(v -> java.util.Arrays.stream(v.split(valueSeparatorRegex)))
+                        .map(String::trim)
+                        .anyMatch(valuePredicate);
             }
         };
     }

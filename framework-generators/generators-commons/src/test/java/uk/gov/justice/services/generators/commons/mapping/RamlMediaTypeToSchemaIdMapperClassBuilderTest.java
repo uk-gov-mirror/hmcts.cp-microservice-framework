@@ -87,15 +87,12 @@ public class RamlMediaTypeToSchemaIdMapperClassBuilderTest {
     @SuppressWarnings("ConstantConditions")
     private Class<?> writeSourceFileAndCompile(final String packageName, final TypeSpec typeSpec) throws IOException {
 
-        final File outputFolderRoot = outputFolder.getParentFile();
-
         JavaFile.builder(packageName, typeSpec)
                 .build()
-                .writeTo(outputFolderRoot);
-
+                .writeTo(outputFolder);
 
         return javaCompilerUtil()
-                .compiledClassesOf(outputFolderRoot, outputFolderRoot, packageName)
+                .compiledClassesOf(outputFolder, outputFolder, packageName)
                 .stream()
                 .filter(clazz -> !clazz.getName().equals("java.lang.Object"))
                 .findFirst().orElseGet(null);
