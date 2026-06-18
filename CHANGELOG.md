@@ -5,6 +5,17 @@ on [Keep a CHANGELOG](http://keepachangelog.com/). This project adheres to
 
 ## [Unreleased]
 
+## [25.104.0-M2] - 2026-06-18
+### Changed
+- Bumped parent `maven-framework-parent-pom` to `25.104.0-M7` — picks up `liquibase.version=5.0.3`
+- Updated `framework-libraries.version` to `25.104.0-M10`
+- Removed `liquibase.maven.plugin.version` property — now obsolete; plugin version is managed at `${liquibase.version}` via parent
+- Removed `liquibase.hub.mode` property — removed in Liquibase 4.12.0
+
+### Fixed
+- `lint-check-rules`: pinned `jakarta.xml.bind-api` to `${jakarta.xml.bind-api.raml.version}` (2.3.2) — the BOM-managed version 4.0.0 lacks the `javax.xml.bind.*` namespace that the RAML parser requires, causing `NoClassDefFoundError: javax/xml/bind/SchemaOutputResolver` in tests
+- `shuttering-persistence`: removed explicit `<version>` tag from Liquibase plugin config inside `integration-tests` profile — version now correctly inherited from parent `pluginManagement`
+
 ## [25.104.0-M1] - 2026-06-09
 ### Changed
 - Upgraded to Java 25 and Jakarta EE 11 (25.104.x release line)

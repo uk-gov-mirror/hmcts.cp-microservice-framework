@@ -5,7 +5,7 @@
     <parent>
         <artifactId>framework-system</artifactId>
         <groupId>uk.gov.justice.services</groupId>
-        <version>25.104.0-M2-SNAPSHOT</version>
+        <version>25.104.0-M2</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -59,7 +59,6 @@
                     <plugin>
                         <groupId>org.liquibase</groupId>
                         <artifactId>liquibase-maven-plugin</artifactId>
-                        <version>${liquibase.maven.plugin.version}</version>
                         <configuration>
                             <changeLogFile>liquibase/framework-system-changelog.xml</changeLogFile>
                             <driver>org.postgresql.Driver</driver>

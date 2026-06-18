@@ -7,12 +7,12 @@
     <parent>
         <groupId>uk.gov.justice</groupId>
         <artifactId>maven-framework-parent-pom</artifactId>
-        <version>25.104.0-M3</version>
+        <version>25.104.0-M7</version>
     </parent>
 
     <groupId>uk.gov.justice.services</groupId>
     <artifactId>microservice-framework</artifactId>
-    <version>25.104.0-M2-SNAPSHOT</version>
+    <version>25.104.0-M2</version>
     <packaging>pom</packaging>
 
     <name>Microservice Framework</name>
@@ -47,9 +47,7 @@
     
     <properties>
         <cpp.repo.name>microservice_framework</cpp.repo.name>
-        <framework-libraries.version>25.104.0-M6</framework-libraries.version>
-        <!-- liquibase-maven-plugin: 4.24–4.29 have mojo loading failures (LOG_FORMAT removed, AbstractLogger API break); pin to 4.10.0 which pre-dates the refactoring -->
-        <liquibase.maven.plugin.version>4.10.0</liquibase.maven.plugin.version>
+        <framework-libraries.version>25.104.0-M10</framework-libraries.version>
         <!--
             jakarta.xml.bind-api is managed by the BOM at 4.0.0 (Jakarta EE 10,
             namespace jakarta.xml.bind.*). The RAML parser (org.raml:raml-parser)
