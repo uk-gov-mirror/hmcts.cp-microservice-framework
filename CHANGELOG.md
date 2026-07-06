@@ -5,6 +5,16 @@ on [Keep a CHANGELOG](http://keepachangelog.com/). This project adheres to
 
 ## [Unreleased]
 
+## [25.104.0-M3] - 2026-07-06
+### Added
+- New `persistence-jpa` module providing `EntityManagerProducer` and the event-stream self-healing `EntityManagerFlushInterceptor` (with its provider and exception), relocated from the orphaned `persistence-deltaspike` module. Package `uk.gov.justice.services.persistence` is retained so consumers need no import changes; the interceptor now uses `@PersistenceContext` for the container-managed `EntityManager`
+
+### Fixed
+- Restored the event-stream self-healing `EntityManager` flush that was silently lost when the Java 25 upgrade orphaned `persistence-deltaspike`. Hibernate insert/update constraint violations again surface **inside the interceptor chain** (attributed to `EntityManagerFlushInterceptor`) and are captured in the stream error tables, instead of only failing later at transaction commit. Proven end-to-end via cp-cake-shop `StreamErrorHandlingIT`
+
+### Removed
+- Orphaned `persistence-deltaspike` module (dropped from the reactor build during the Java 25 upgrade; its DeltaSpike infrastructure is obsolete after the DeltaSpike→JPA migration)
+
 ## [25.104.0-M2] - 2026-06-18
 ### Changed
 - Bumped parent `maven-framework-parent-pom` to `25.104.0-M7` — picks up `liquibase.version=5.0.3`

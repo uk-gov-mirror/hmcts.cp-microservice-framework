@@ -8,12 +8,13 @@ import uk.gov.justice.services.core.interceptor.InterceptorContext;
 
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.SystemException;
 import jakarta.transaction.UserTransaction;
 
 public class EntityManagerFlushInterceptor implements Interceptor {
 
-    @Inject
+    @PersistenceContext
     private EntityManager entityManager;
 
     @Inject

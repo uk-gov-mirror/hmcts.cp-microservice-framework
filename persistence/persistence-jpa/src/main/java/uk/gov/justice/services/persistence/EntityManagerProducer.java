@@ -11,7 +11,7 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.PersistenceUnit;
 
 /**
- * Producer of {:link EntityManager} for use with JPA (Delta-spike).
+ * Producer of {:link EntityManager} for use with JPA.
  */
 @ApplicationScoped
 public class EntityManagerProducer {

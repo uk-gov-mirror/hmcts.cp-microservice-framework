@@ -28,7 +28,7 @@ public class EntityManagerProducerTest {
     private EntityManagerProducer entityManagerProducer;
 
     @BeforeEach
-    public void setup() {
+    public void openEntityManagerProducerWithMockFactory() {
         entityManagerProducer = new EntityManagerProducer();
         entityManagerProducer.entityManagerFactory = entityManagerFactory;
         when(entityManagerFactory.createEntityManager()).thenReturn(entityManager);
@@ -60,6 +60,4 @@ public class EntityManagerProducerTest {
 
         verify(em, never()).close();
     }
-
-
 }
