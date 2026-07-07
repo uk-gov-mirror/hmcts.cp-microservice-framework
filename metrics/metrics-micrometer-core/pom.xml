@@ -6,7 +6,7 @@
     <parent>
         <groupId>uk.gov.justice.metrics</groupId>
         <artifactId>metrics</artifactId>
-        <version>25.104.0-M3</version>
+        <version>25.104.0-M4-SNAPSHOT</version>
     </parent>
 
     <artifactId>metrics-micrometer-core</artifactId>

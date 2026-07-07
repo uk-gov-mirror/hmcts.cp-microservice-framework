@@ -8,7 +8,7 @@
     <parent>
         <artifactId>microservice-framework</artifactId>
         <groupId>uk.gov.justice.services</groupId>
-        <version>25.104.0-M3</version>
+        <version>25.104.0-M4-SNAPSHOT</version>
     </parent>
 
     <artifactId>framework-jmx-command-client</artifactId>
