@@ -5,6 +5,11 @@ on [Keep a CHANGELOG](http://keepachangelog.com/). This project adheres to
 
 ## [Unreleased]
 
+## [25.104.0-M4] - 2026-07-27
+### Changed
+- Bumped parent `maven-framework-parent-pom` to `25.104.0-M8` — picks up Jackson `2.21.5` (**CVE-2026-54515**) and the `org.junit:junit-bom` import via `maven-common-bom` M6, plus the `buildnumber-maven-plugin` warning fix.
+- Bumped `framework-libraries.version` to `25.104.0-M11`.
+
 ## [25.104.0-M3] - 2026-07-06
 ### Added
 - New `persistence-jpa` module providing `EntityManagerProducer` and the event-stream self-healing `EntityManagerFlushInterceptor` (with its provider and exception), relocated from the orphaned `persistence-deltaspike` module. Package `uk.gov.justice.services.persistence` is retained so consumers need no import changes; the interceptor now uses `@PersistenceContext` for the container-managed `EntityManager`
