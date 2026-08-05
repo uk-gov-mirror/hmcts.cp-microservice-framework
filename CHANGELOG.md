@@ -5,6 +5,10 @@ on [Keep a CHANGELOG](http://keepachangelog.com/). This project adheres to
 
 ## [Unreleased]
 
+## [25.104.0-M5] - 2026-08-05
+### Changed
+- Bumped parent `maven-framework-parent-pom` to `25.104.0-M9` and `framework-libraries.version` to `25.104.0-M12` — picks up the Apache Artemis client bump `2.53.0` → `2.54.0` (via common-bom M7).
+
 ## [25.104.0-M4] - 2026-07-27
 ### Changed
 - Bumped parent `maven-framework-parent-pom` to `25.104.0-M8` — picks up Jackson `2.21.5` (**CVE-2026-54515**) and the `org.junit:junit-bom` import via `maven-common-bom` M6, plus the `buildnumber-maven-plugin` warning fix.
